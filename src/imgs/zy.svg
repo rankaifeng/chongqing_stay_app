@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33.5" height="21" viewBox="0 0 33.5 21" fill="none">
+<path     fill="#78DDE9" fill-opacity="0.5" d="M5 1L30 1L30 11C30 16.5228 25.5228 21 20 21L0 21L9.18485e-16 6C1.08757e-15 3.23858 2.23858 1 5 1Z">
+</path>
+<path     fill="url(#linear_fill_27_6_0)"  d="M12.5 -2.57176e-15L33.5 0L33.5 10C33.5 15.5228 29.0228 20 23.5 20L12.5 20C9.73858 20 7.5 17.7614 7.5 15L7.5 5C7.5 2.23858 9.73858 -2.90994e-15 12.5 -2.57176e-15Z">
+</path>
+<path d="M16.5 13.1666C16.2239 13.1666 16 12.98 16 12.7499L16 5.24992C16 5.0198 16.2239 4.83325 16.5 4.83325L23.5 4.83325C23.7761 4.83325 24 5.0198 24 5.24992L24 12.7499C24 12.98 23.7761 13.1666 23.5 13.1666L16.5 13.1666Z" stroke="rgba(255, 255, 255, 0.6)" stroke-width="1.3333333333333333" stroke-linejoin="round"  >
+</path>
+<path d="M19.25 8.58325L19.25 4.83325L22.25 4.83325L22.25 8.58325L20.75 7.27644L19.25 8.58325Z" stroke="rgba(255, 255, 255, 0.6)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round" >
+</path>
+<path    stroke="rgba(255, 255, 255, 0.6)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round"  d="M16.5 4.83325L23.5 4.83325">
+</path>
+<defs>
+<linearGradient id="linear_fill_27_6_0" x1="-2" y1="-14.5" x2="33" y2="-14.5" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#54D4EE"  />
+<stop offset="1" stop-color="#78DDE9"  />
+</linearGradient>
+</defs>
+</svg>

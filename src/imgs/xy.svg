@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33.49977111816406" height="20" viewBox="0 0 33.49977111816406 20" fill="none">
+<path     fill="#FFB185" fill-opacity="0.5" d="M5 0.965576L26.5116 0.965576L26.5116 10C26.5116 15.5229 22.0345 20.0001 16.5116 20.0001L0 20.0001L8.59361e-16 5.96559C1.02845e-15 3.20416 2.23858 0.965576 5 0.965576Z">
+</path>
+<path     fill="url(#linear_fill_28_2494_0)"  d="M12.5698 -2.5632e-15L33.4998 0L33.4998 9.34004C33.4998 14.8629 29.0226 19.3401 23.4998 19.3401L12.5698 19.3401C9.80834 19.3401 7.56976 17.1015 7.56976 14.3401L7.56976 5.00002C7.56976 2.23859 9.80834 -2.90138e-15 12.5698 -2.5632e-15Z">
+</path>
+<path d="M16.25 6.5L16.25 12.5L23.75 12.5L23.75 6.5L20 3.5L16.25 6.5Z" stroke="rgba(255, 255, 255, 0.6)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round" >
+</path>
+<path d="M18.75 9.25L18.75 12.5L21.25 12.5L21.25 9.25L18.75 9.25Z" stroke="rgba(255, 255, 255, 0.6)" stroke-width="1.3333333333333333" stroke-linejoin="round"  >
+</path>
+<path    stroke="rgba(255, 255, 255, 0.6)" stroke-width="1.3333333333333333"  stroke-linecap="round"  d="M16.25 12.5L23.75 12.5">
+</path>
+<defs>
+<linearGradient id="linear_fill_28_2494_0" x1="7.0697784423828125" y1="7.172607421875" x2="38.000030517578125" y2="7.172607421875" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#FF8864"  />
+<stop offset="1" stop-color="#FFB185"  />
+</linearGradient>
+</defs>
+</svg>
