@@ -1,0 +1,44 @@
+.grid-content {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    box-sizing: border-box;
+   
+
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        position: relative;
+
+        .grid-c {
+            background-color: rgb(133, 182, 144);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            width: 80px;
+            height: 80px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .grid-t {
+            color: rgba(51, 51, 51, 1);
+            font-size: 26px;
+        }
+
+        .grid-t1 {
+            color: rgba(181, 181, 181, 1);
+            font-size: 22px;
+            text-align: center;
+            position: absolute;
+        }
+    }
+}
