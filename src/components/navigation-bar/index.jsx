@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./index.less";
 import Icon from "@antmjs/vantui/es/icon";
 
-const NavigationBar = ({ isBackIcon, backIconColor, title, titleColor, leftTitle }) => {
+const NavigationBar = ({ isBackIcon, backIconColor, title, titleColor, leftTitle, isWeight }) => {
 	const [navBarHeight, setNavBarHeight] = useState(0);
 
 	useEffect(() => {
@@ -23,12 +23,12 @@ const NavigationBar = ({ isBackIcon, backIconColor, title, titleColor, leftTitle
 	const onBack = () => {
 		const pages = getCurrentPages();
 		if (pages.length >= 2) {
-			navigateBack();
+			Taro.navigateBack();
 		}
 	};
 	return (
 		<View className={`nav_custom_bar`} style={{ height: ` ${navBarHeight}px` }}>
-			{leftTitle && <Text className="nav_custom_bar_left_title">{leftTitle}</Text>}
+			{leftTitle && <Text className='nav_custom_bar_left_title'>{leftTitle}</Text>}
 			{isBackIcon && (
 				<Icon
 					onClick={onBack}
@@ -38,7 +38,7 @@ const NavigationBar = ({ isBackIcon, backIconColor, title, titleColor, leftTitle
 					size='22px'
 				/>
 			)}
-			<Text style={{ color: titleColor }} className='nav_custom_bar_title'>
+			<Text style={{ color: titleColor, fontWeight: isWeight && "600" }} className='nav_custom_bar_title'>
 				{title}
 			</Text>
 		</View>

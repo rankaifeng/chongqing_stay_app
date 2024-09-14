@@ -7,6 +7,7 @@ import Icon from "@antmjs/vantui/es/icon";
 import BgTitle from "../../components/bg-title";
 import zy from "../../imgs/zy.svg";
 import xy from "../../imgs/xy.svg";
+import Taro from "@tarojs/taro";
 export default function My() {
 	return (
 		<View className='my'>
@@ -45,7 +46,7 @@ export default function My() {
 					<BgTitle title='服务功能' />
 				</View>
 
-				<View className='active'>
+				<View className='active' onClick={() => Taro.navigateTo({ url: "/active-record/index" })}>
 					<View className='active-item'>
 						<View className='active-svg' />
 						活动申请记录·Event Application Record

@@ -1,0 +1,27 @@
+.status-btn {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    .status-under-review {
+        .publish-btn(#5090fd);
+    }
+
+    .status-pass {
+        .publish-btn(#5bc3aa)
+    }
+
+    .status-fail {
+        .publish-btn(#fb885a)
+    }
+}
+
+.publish-btn(@color) {
+    background-color: @color;
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 90px;
+    border-bottom-right-radius: 0;
+    color: #fff;
+    background: linear-gradient(to right, @color, darken(@color, 10%));
+}
