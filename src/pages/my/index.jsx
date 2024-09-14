@@ -2,7 +2,8 @@ import { Text, View } from "@tarojs/components";
 import React from "react";
 import "./index.less";
 import NavigationBar from "../../components/navigation-bar";
-import { Icon, Image } from "@antmjs/vantui";
+import Image from "@antmjs/vantui/es/image";
+import Icon from "@antmjs/vantui/es/icon";
 import BgTitle from "../../components/bg-title";
 import zy from "../../imgs/zy.svg";
 import xy from "../../imgs/xy.svg";
@@ -45,11 +46,11 @@ export default function My() {
 				</View>
 
 				<View className='active'>
-					<View className="active-item">
+					<View className='active-item'>
 						<View className='active-svg' />
 						活动申请记录·Event Application Record
 					</View>
-					<Icon name='arrow' size='16px' style={{marginRight:'10px'}}/>
+					<Icon name='arrow' size='16px' style={{ marginRight: "10px" }} />
 				</View>
 
 				<View className='exit'>退出账号·Abort</View>

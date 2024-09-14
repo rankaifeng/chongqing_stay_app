@@ -2,7 +2,7 @@ import Taro from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 import { useEffect, useState } from "react";
 import "./index.less";
-import { Icon } from "@antmjs/vantui";
+import Icon from "@antmjs/vantui/es/icon";
 
 const NavigationBar = ({ isBackIcon, backIconColor, title, titleColor, leftTitle }) => {
 	const [navBarHeight, setNavBarHeight] = useState(0);
