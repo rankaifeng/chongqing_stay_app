@@ -1,18 +1,16 @@
 export default defineAppConfig({
   pages: [
-    'pages/active-record/index',
-    'pages/active-record/detail/index',
     'pages/home/index',
     'pages/charm/index',
     'pages/consult/index',
     'pages/my/index',
   ],
-  // subPackages: [
-  //   {
-  //     root: 'active-record',
-  //     pages: ['index'],
-  //   },
-  // ],
+  subPackages: [
+    {
+      root: 'active-record',
+      pages: ['index', 'detail/index'],
+    },
+  ],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',

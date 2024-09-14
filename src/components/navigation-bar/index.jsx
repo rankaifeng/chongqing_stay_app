@@ -22,9 +22,7 @@ const NavigationBar = ({ isBackIcon, backIconColor, title, titleColor, leftTitle
 	};
 	const onBack = () => {
 		const pages = getCurrentPages();
-		if (pages.length >= 2) {
-			Taro.navigateBack();
-		}
+		Taro.navigateBack({ delta: 1 });
 	};
 	return (
 		<View className={`nav_custom_bar`} style={{ height: ` ${navBarHeight}px` }}>

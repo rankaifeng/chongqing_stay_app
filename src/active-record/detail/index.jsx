@@ -1,9 +1,9 @@
 import { Text, View } from "@tarojs/components";
 import React from "react";
 import "../index.less";
-import NavigationBar from "../../../components/navigation-bar";
-import StatusBtn from "../../../components/status-btn";
-import BgTitle from "../../../components/bg-title";
+import NavigationBar from "../../components/navigation-bar";
+import StatusBtn from "../../components/status-btn";
+import BgTitle from "../../components/bg-title";
 export default function ActiveRecordDetail() {
 	return (
 		<View className='active-record' style={{ height: "auto" }}>
