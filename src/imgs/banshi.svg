@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30" fill="none">
+<path d="M15 27.5C20.868 27.5 25.625 22.743 25.625 16.875C25.625 11.007 20.868 6.25 15 6.25C9.132 6.25 4.375 11.007 4.375 16.875C4.375 22.743 9.132 27.5 15 27.5Z" stroke="rgba(34, 189, 153, 1)" stroke-width="1.3333333333333333"      fill="#22BD99" >
+</path>
+<path    stroke="rgba(34, 189, 153, 1)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round"  d="M11.875 2.5L18.125 2.5">
+</path>
+<path d="M12.5 16.875L15 12.5L17.5 16.875L15 21.25L12.5 16.875Z" stroke="rgba(255, 255, 255, 1.00)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round" >
+</path>
+<path    stroke="rgba(255, 255, 255, 1.00)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round"  d="M4.375 16.875L6.875 16.875">
+</path>
+<path    stroke="rgba(255, 255, 255, 1.00)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round"  d="M23.125 16.875L25.625 16.875">
+</path>
+<path    stroke="rgba(255, 255, 255, 1.00)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round"  d="M15 6.25L15 8.75">
+</path>
+<path    stroke="rgba(255, 255, 255, 1.00)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round"  d="M15 25L15 27.5">
+</path>
+<path    stroke="rgba(34, 189, 153, 1)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round"  d="M10.9375 26.6958C12.189 27.2141 13.5611 27.5001 15 27.5001C16.4389 27.5001 17.811 27.2141 19.0625 26.6958">
+</path>
+<path    stroke="rgba(34, 189, 153, 1)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round"  d="M5.17932 12.8125C4.66103 14.064 4.375 15.4361 4.375 16.875C4.375 18.3139 4.66103 19.686 5.17932 20.9375">
+</path>
+<path    stroke="rgba(34, 189, 153, 1)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round"  d="M24.8206 12.8125C25.3389 14.064 25.6249 15.4361 25.6249 16.875C25.6249 18.3139 25.3389 19.686 24.8206 20.9375">
+</path>
+<path    stroke="rgba(34, 189, 153, 1)" stroke-width="1.3333333333333333" stroke-linejoin="round" stroke-linecap="round"  d="M10.6299 7.1875C11.9628 6.58525 13.4423 6.25 15.0001 6.25C16.5578 6.25 18.0373 6.58525 19.3702 7.1875">
+</path>
+</svg>

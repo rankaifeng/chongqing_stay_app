@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="27" viewBox="0 0 27 27" fill="none">
+<rect  x="3.375" y="3.375" width="20.25" height="11.250000953674316" rx="1.25"    fill="#31AFE0" >
+</rect>
+<path   fill="rgba(49, 175, 224, 1)"  d="M4.625 2.125L22.375 2.125C23.7557 2.125 24.875 3.24429 24.875 4.625L24.875 13.375C24.875 14.7557 23.7557 15.875 22.375 15.875L4.625 15.875C3.24429 15.875 2.125 14.7557 2.125 13.375L2.125 4.625C2.125 3.24429 3.24429 2.125 4.625 2.125ZM4.625 4.625C4.625 4.625 4.625 4.625 4.625 4.625L4.625 13.375C4.625 13.375 4.625 13.375 4.625 13.375L22.375 13.375C22.375 13.375 22.375 13.375 22.375 13.375L22.375 4.625C22.375 4.625 22.375 4.625 22.375 4.625L4.625 4.625Z">
+</path>
+<path    stroke="rgba(255, 255, 255, 1.00)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"  d="M7.875 7.3125L12.375 7.3125">
+</path>
+<path    stroke="rgba(255, 255, 255, 1.00)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"  d="M7.875 10.6875L19.125 10.6875">
+</path>
+<path    stroke="rgba(49, 175, 224, 1)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"  d="M4.5 24.75L7.25001 21.375L19.5 21.375L22.5 24.75">
+</path>
+<path    stroke="rgba(49, 175, 224, 1)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"  d="M13.5 14.625L13.5 24.75">
+</path>
+</svg>

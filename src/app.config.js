@@ -24,6 +24,9 @@ export default defineAppConfig({
     }, {
       root: 'application-letter',
       pages: ['index'],
+    }, {
+      root: 'news-express',
+      pages: ['index', 'detail/index'],
     },
   ],
   window: {

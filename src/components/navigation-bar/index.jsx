@@ -39,6 +39,7 @@ const NavigationBar = ({ isBackIcon, backIconColor, title, titleColor, leftTitle
 			<Text style={{ color: titleColor, fontWeight: isWeight && "600" }} className='nav_custom_bar_title'>
 				{title}
 			</Text>
+
 		</View>
 	);
 };
