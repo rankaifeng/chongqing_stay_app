@@ -11,8 +11,8 @@ import Taro from "@tarojs/taro";
 export default function My() {
 	return (
 		<View className='my'>
-			<NavigationBar leftTitle='个人中心' />
 			<View className='my-content'>
+				<NavigationBar leftTitle='个人中心' />
 				<View className='my-top'>
 					<Text className='name'>亮亮的小佩服哟 [点击登录]</Text>
 					<Text className='day'>加入悦留学重庆第 345 天</Text>
@@ -28,7 +28,13 @@ export default function My() {
 							<Text className='xy-name'>理学院</Text>
 							<Image
 								src={xy}
-								style={{ width: "33.5px", height: "21px", position: "absolute", right: 0, bottom: 0 }}
+								style={{
+									width: "33.5px",
+									height: "21px",
+									position: "absolute",
+									right: 0,
+									bottom: 0,
+								}}
 							/>
 						</View>
 						<View className='info-item ml'>
@@ -36,7 +42,13 @@ export default function My() {
 							<Text className='xy-name'>新闻传媒</Text>
 							<Image
 								src={zy}
-								style={{ width: "33.5px", height: "21px", position: "absolute", right: 0, bottom: 0 }}
+								style={{
+									width: "33.5px",
+									height: "21px",
+									position: "absolute",
+									right: 0,
+									bottom: 0,
+								}}
 							/>
 						</View>
 					</View>

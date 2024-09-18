@@ -9,6 +9,7 @@ import numberImg from "../imgs/number.svg";
 import qianImg from "../imgs/qianzi.svg";
 import gongImg from "../imgs/gonghan.svg";
 import DigitalCheckIn from "./digital-check-in";
+import Taro from "@tarojs/taro";
 export default function VisaExtension() {
 	const [show, setShow] = useState(false);
 	return (
@@ -39,7 +40,7 @@ export default function VisaExtension() {
 						<View className='visa-c-item-desc'>Visa Application Form</View>
 					</View>
 				</View>
-				<View className='visa-c-item'>
+				<View className='visa-c-item' onClick={() => Taro.navigateTo({ url: "/application-letter/index" })}>
 					<Image src={gongImg} className='san-img' />
 					<View className='visa-c-item-right'>
 						<View className='visa-c-item-title'>申请工函</View>

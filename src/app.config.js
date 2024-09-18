@@ -21,6 +21,9 @@ export default defineAppConfig({
     }, {
       root: 'visa-extension',
       pages: ['index'],
+    }, {
+      root: 'application-letter',
+      pages: ['index'],
     },
   ],
   window: {
