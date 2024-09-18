@@ -7,6 +7,15 @@
         margin: 20px auto;
         width: 95%;
 
+        .v {
+            height: 86vh;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
         .van-grid {
             padding: 0 !important;
         }
@@ -33,7 +42,8 @@
                     height: 180px;
                     width: 30%;
                 }
-                .ml{
+
+                .ml {
                     margin-left: 20px;
                 }
             }

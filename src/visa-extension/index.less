@@ -1,0 +1,58 @@
+.visa-extension {
+    height: 100%;
+    background: url('../imgs/visa-bg.svg') no-repeat rgba(245, 248, 255, 1);
+    width: 100%;
+    background-size: 100%;
+    position: relative;
+
+    .te-bg {
+        position: absolute;
+        top: 12%;
+        left: 3%;
+    }
+
+    .te-p {
+        position: absolute;
+        right: 0;
+    }
+
+    .visa-content {
+        width: 95%;
+        position: absolute;
+        top: 29%;
+        left: 2.5%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+
+        .visa-c-item {
+            background: rgba(255, 255, 255, 1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+
+            .san-img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .visa-c-item-right {
+                margin-left: 20px;
+                width: 80%;
+
+                .visa-c-item-title {
+                    font-size: 28px;
+                    color: rgba(59, 59, 59, 1);
+                    font-weight: 600;
+                }
+
+                .visa-c-item-desc {
+                    margin-top: 10px;
+                    color: rgba(191, 191, 191, 1);
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

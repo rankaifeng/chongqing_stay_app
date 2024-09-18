@@ -18,6 +18,9 @@ export default defineAppConfig({
     }, {
       root: 'notify',
       pages: ['index'],
+    }, {
+      root: 'visa-extension',
+      pages: ['index'],
     },
   ],
   window: {
