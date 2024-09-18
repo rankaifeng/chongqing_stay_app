@@ -2,6 +2,7 @@ import { Text, View } from "@tarojs/components";
 import React from "react";
 import "./index.less";
 import { Image } from "@antmjs/vantui";
+import Taro from "@tarojs/taro";
 export default function GridContent({ datas, type }) {
 	function splitStringByLength(str, length) {
 		const result = [];
@@ -21,7 +22,7 @@ export default function GridContent({ datas, type }) {
 					mT = item.title;
 				}
 				return (
-					<View className='grid-item'>
+					<View className='grid-item' onClick={() => Taro.navigateTo({ url: item.path })}>
 						<View className='grid-c' style={{ background: item.bg }}>
 							<Image width='30px' height='30px' src={item.icon} />
 						</View>

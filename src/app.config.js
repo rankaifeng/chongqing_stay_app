@@ -9,6 +9,15 @@ export default defineAppConfig({
     {
       root: 'active-record',
       pages: ['index', 'detail/index'],
+    }, {
+      root: 'residence-information',
+      pages: ['index'],
+    }, {
+      root: 'service-guide',
+      pages: ['index'],
+    }, {
+      root: 'notify',
+      pages: ['index'],
     },
   ],
   window: {

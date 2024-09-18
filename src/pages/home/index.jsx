@@ -35,11 +35,13 @@ export default function Home() {
 						{
 							title: "居留须知",
 							eg: "Notes on Residence",
+							path: "/residence-information/index",
 							bg: "gray",
 							icon: "https://fastly.jsdelivr.net/npm/@vant/assets/apple-1.jpeg",
 						},
 						{
 							title: "办事指南",
+							path: "/service-guide/index",
 							eg: "Clerk's Guide",
 							bg: "gray",
 							icon: "https://fastly.jsdelivr.net/npm/@vant/assets/apple-1.jpeg",
@@ -47,6 +49,7 @@ export default function Home() {
 						{
 							title: "签证提醒",
 							eg: "Visa Reminder",
+							path: "/notify/index",
 							bg: "gray",
 							icon: "https://fastly.jsdelivr.net/npm/@vant/assets/apple-1.jpeg",
 						},
