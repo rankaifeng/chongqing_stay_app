@@ -113,6 +113,7 @@ export default function Home() {
 								title: "创新创业项目申报",
 								eg: "Innovation and...",
 								bg: "#ffdbc2",
+								path: "/project-application/index",
 								icon: chuagnxinImg,
 							},
 							{
