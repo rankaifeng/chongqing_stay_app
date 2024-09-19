@@ -30,7 +30,26 @@ export default defineAppConfig({
     }, {
       root: 'project-application',
       pages: ['index',],
+    }, {
+      root: 'page-service-guide',
+      pages: ['index',],
+    }, {
+      root: 'internship-guidance',
+      pages: ['index',],
     },
+    {
+      root: 'company-detail',
+      pages: ['index',],
+    }, {
+      root: 'job-detail',
+      pages: ['index',],
+    }, {
+      root: 'commerce-overseas',
+      pages: ['index',],
+    }, {
+      root: 'collaborative-startups',
+      pages: ['index',]
+    }
   ],
   window: {
     backgroundTextStyle: 'light',

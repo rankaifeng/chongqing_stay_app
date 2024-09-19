@@ -119,18 +119,21 @@ export default function Home() {
 							{
 								title: "实习指导",
 								eg: "Practical guidance",
+								path: "/internship-guidance/index",
 								bg: "#d0cfff",
 								icon: zhidaoImg,
 							},
 							{
 								title: "电商海外贸易产品",
 								eg: "E-commerce overseas...",
+								path: "/commerce-overseas/index",
 								bg: "#a3c9ff",
 								icon: dianshangImg,
 							},
 							{
 								title: `创业公司项目展示`,
 								eg: "Startup Company",
+								path: "/collaborative-startups/index",
 								bg: "#9ee4ff",
 								icon: gognsiImg,
 							},

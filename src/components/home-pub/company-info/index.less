@@ -1,0 +1,36 @@
+.item-company {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    .company-info {
+        margin-left: 20px;
+        width: 90%;
+
+        .company-name {
+            color: rgba(21, 21, 21, 1);
+            font-size: 32px;
+        }
+
+        .company-address {
+            display: flex;
+            justify-content: space-between;
+            color: rgba(132, 132, 132, 1);
+            font-size: 24px;
+
+            .company-address-desc {
+                width: 70%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .company-address-text {
+                margin-right: 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
