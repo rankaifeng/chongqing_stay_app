@@ -1,0 +1,73 @@
+.consult {
+    height: 100%;
+    padding: 0 20px;
+    background:
+        linear-gradient(to bottom, transparent, #f0f1f5 700px),
+        linear-gradient(to right, #9cb5d1 20%, #edf3fd 80%);
+
+    .consult-content {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+
+        .gg-bg {
+            background: url('../../imgs/gg.svg') left no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 30%;
+            left: 0;
+        }
+
+        .cousult-r {
+            background: url('../../imgs/ren.png') right no-repeat;
+            background-size: 100%;
+        }
+
+    }
+
+    .c-c {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background: rgba(245, 248, 255, 1);
+        margin-top: -11px;
+        height: 80vh;
+        width: 95%;
+        left: 2.5%;
+        position: absolute;
+
+        .c-c-item {
+            background: rgba(255, 255, 255, 1);
+            border-radius: 10px;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            position: relative;
+
+            .arrow {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .c-right {
+                width: 90%;
+                margin-left: 20px;
+
+                .phone {
+                    font-size: 30px;
+                    color: rgba(59, 59, 59, 1);
+                    font-weight: 600;
+                }
+
+                .phone-des {
+                    font-size: 26px;
+                    color: rgba(191, 191, 191, 1);
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
