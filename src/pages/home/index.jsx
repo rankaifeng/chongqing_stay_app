@@ -16,6 +16,7 @@ import gognsiImg from "../../imgs/gongsi.svg";
 import Taro from "@tarojs/taro";
 import SwiperImg from "./SwiperImg";
 import NewExpress from "./NewExpress";
+import StudayScholl from "./StudayScholl";
 
 export default function Home() {
 	return (
@@ -62,46 +63,7 @@ export default function Home() {
 						]}
 					/>
 					<NewExpress />
-					<View className='t'>
-						<BgTitle title='留学重庆' size='18px' />
-						<Text>·Study in Chongqing</Text>
-					</View>
-
-					<View className='studay'>
-						<View className='s-left'>
-							<View className='left-item'>
-								<Image
-									className='left-item-img'
-									round
-									width={150}
-									height={150}
-									src='https://img.yzcdn.cn/vant/cat.jpeg'
-								/>
-							</View>
-							<View className='left-item ml'>
-								<Image
-									className='left-item-img'
-									round
-									width={150}
-									height={150}
-									src='https://img.yzcdn.cn/vant/cat.jpeg'
-								/>
-							</View>
-							<View className='left-item ml'>
-								<Image
-									className='left-item-img'
-									round
-									width={150}
-									height={150}
-									src='https://img.yzcdn.cn/vant/cat.jpeg'
-								/>
-							</View>
-						</View>
-						<View className='s-right'>
-							<View>更多</View>
-							<View>more</View>
-						</View>
-					</View>
+					<StudayScholl />
 					<View className='t'>
 						<BgTitle title='文旅之窗' size='18px' />
 						<Text>·Window on Culture and Tourism</Text>

@@ -49,6 +49,9 @@ export default defineAppConfig({
     }, {
       root: 'collaborative-startups',
       pages: ['index',]
+    }, {
+      root: 'studay-chongqing',
+      pages: ['index', 'detail/index']
     }
   ],
   window: {

@@ -17,3 +17,10 @@ export const getHomeBannerImgs = (params) => get('/information_manage/home_carou
  * @returns 
  */
 export const getNewsExpressList = params => get('/information_manage/news_express/news_express_list', params)
+
+/**
+ * 留学重庆
+ * @param {*} params 
+ * @returns 
+ */
+export const getSchoolInfoList = params => get('/school_manage/school_info/school_info_list', params)
