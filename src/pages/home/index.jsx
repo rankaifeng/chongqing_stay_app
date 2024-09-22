@@ -1,37 +1,28 @@
-import { View, Text } from "@tarojs/components";
+import { View, Text, Image } from "@tarojs/components";
 import React from "react";
 import "./index.less";
-import { Image, Swiper, SwiperItem } from "@antmjs/vantui";
 import NavigationBar from "../../components/navigation-bar";
 import GridContent from "../../components/grid-content";
 import BgTitle from "../../components/bg-title";
 import ImgContent from "../../components/img-content";
-import banImg from "../../imgs/ban.png";
 import xuImg from "../../imgs/xu.svg";
 import banshiImg from "../../imgs/banshi.svg";
 import tixingImg from "../../imgs/tixing.svg";
 import yanqiImg from "../../imgs/yanqi.svg";
-
 import chuagnxinImg from "../../imgs/chuangx.svg";
 import zhidaoImg from "../../imgs/zhidao.svg";
 import dianshangImg from "../../imgs/dianshang.svg";
 import gognsiImg from "../../imgs/gongsi.svg";
 import Taro from "@tarojs/taro";
-const imags = [banImg];
+import SwiperImg from "./SwiperImg";
+
 export default function Home() {
-	const height = 150;
 	return (
 		<View className='home'>
 			<View className='home-content'>
 				<NavigationBar leftTitle='悦留重庆' />
 				<View className='v'>
-					<Swiper height={height} autoPlay='3000' initPage={0} paginationVisible style={{ borderRadius: 10 }}>
-						{imags.map((item, index) => (
-							<SwiperItem key={`swiper#demo1${index}`}>
-								<Image src={item} fit='cover' width='100%' height={`${height}px`} />
-							</SwiperItem>
-						))}
-					</Swiper>
+					<SwiperImg />
 					<View className='t'>
 						<BgTitle title='签证须知' size='18px' />
 						<Text>·Visa Information</Text>
@@ -82,13 +73,31 @@ export default function Home() {
 					<View className='studay'>
 						<View className='s-left'>
 							<View className='left-item'>
-								<Image round width={150} height={150} src='https://img.yzcdn.cn/vant/cat.jpeg' />
+								<Image
+									className='left-item-img'
+									round
+									width={150}
+									height={150}
+									src='https://img.yzcdn.cn/vant/cat.jpeg'
+								/>
 							</View>
 							<View className='left-item ml'>
-								<Image round width={150} height={150} src='https://img.yzcdn.cn/vant/cat.jpeg' />
+								<Image
+									className='left-item-img'
+									round
+									width={150}
+									height={150}
+									src='https://img.yzcdn.cn/vant/cat.jpeg'
+								/>
 							</View>
 							<View className='left-item ml'>
-								<Image round width={150} height={150} src='https://img.yzcdn.cn/vant/cat.jpeg' />
+								<Image
+									className='left-item-img'
+									round
+									width={150}
+									height={150}
+									src='https://img.yzcdn.cn/vant/cat.jpeg'
+								/>
 							</View>
 						</View>
 						<View className='s-right'>
