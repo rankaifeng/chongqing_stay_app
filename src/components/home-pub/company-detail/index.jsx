@@ -7,7 +7,6 @@ import Taro from "@tarojs/taro";
 export default function CompanyDetail() {
 	//获取路由参数
 	const mP = Taro.getCurrentInstance().router.params;
-	console.log(mP);
 	return (
 		<View className='company-detail'>
 			<NavigationBar title='公司详情' isBackIcon={true} backIconColor='#000' titleColor='#000' isWeight={600} />
@@ -26,7 +25,7 @@ export default function CompanyDetail() {
 				<View className='company-border' />
 
 				<View className='show-html'>
-					<RichText nodes={mP?.enterpriseIntroduce} />
+					<RichText nodes={mP.title === "产品详情" ? mP?.enterpriseDes : mP?.enterpriseIntroduce} />
 				</View>
 			</View>
 		</View>

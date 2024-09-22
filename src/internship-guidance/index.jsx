@@ -27,10 +27,12 @@ export default function InternshipGuidance() {
 						return (
 							<View
 								className='list-item'
-								onClick={() =>
+								onClick={() =>{
 									Taro.navigateTo({
-										url: `/job-detail/index?title=岗位详情&des=业务产品线下推广专员&desEn=Business Product...&location=${item?.location}&logo=${item?.cover_image}&name=${item?.enterprise_name}&enterpriseIntroduce=${item?.enterprise_introduce}`,
+										url: `/job-detail/index?title=岗位详情&des=业务产品线下推广专员&desEn=Business Product...&location=${item?.location}&logo=${item?.cover_image}&name=${item?.enterprise_name}&enterpriseIntroduce=${item?.enterprise_introduce}&positionIntroduce=就是大家佛教圣地`,
 									})
+								}
+									
 								}>
 								<Text className='item-y'>业务产品线下推广专员·Business Product...</Text>
 								<View className='item-job'>

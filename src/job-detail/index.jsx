@@ -12,7 +12,13 @@ export default function JobDetail() {
 			name={mParams?.name}
 			location={mParams?.location}
 			logo={mParams?.logo}
-			enterpriseIntroduce={mParams?.enterpriseIntroduce}
+			positionIntroduce={mParams?.positionIntroduce}
+			enterpriseDes={mParams?.enterpriseDes}
+			enterpriseIntroduce={
+				mParams.title === "产品详情"
+					? Taro.getCurrentInstance().preloadData.enterpriseIntroduce
+					: mParams?.enterpriseIntroduce
+			}
 		/>
 	);
 }
