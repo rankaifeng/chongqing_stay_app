@@ -43,7 +43,7 @@ export const remindInfoList = params => get("/remind_manage/remind_info/remind_i
  * @param {*} params 
  * @returns 
  */
-export const getEnterpriseInfoList = params => get("/employment_manage/enterprise_info/enterprise_info_list", params)
+export const getPositionInfoList = params => get("/employment_manage/position_info/position_info_list", params)
 
 /**
  * 弹窗
@@ -65,3 +65,4 @@ export const getEmploymentGuideListDetai = params => get('/employment_manage/emp
  * @returns 
  */
 export const getProductInfoList = params => get('/employment_manage/product_info/product_info_list', params)
+

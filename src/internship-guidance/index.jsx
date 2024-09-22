@@ -5,13 +5,13 @@ import CompanyInfo from "../components/home-pub/company-info";
 import "./index.less";
 import { RichText, Text, View } from "@tarojs/components";
 import Taro from "@tarojs/taro";
-import { getEmploymentGuideListDetail, getEnterpriseInfoList } from "../api/globApi";
+import { getEmploymentGuideListDetail, getPositionInfoList } from "../api/globApi";
 import { Empty } from "@antmjs/vantui";
 export default function InternshipGuidance() {
 	const [description, setDescription] = useState(undefined);
 	const [enterpriseInfoList, setEnterpriseInfoList] = useState([]);
 	useEffect(() => {
-		getEnterpriseInfoList({ list_status: 1 }).then((res) => {
+		getPositionInfoList({ list_status: 1 }).then((res) => {
 			setEnterpriseInfoList(res.data);
 		});
 
@@ -27,13 +27,11 @@ export default function InternshipGuidance() {
 						return (
 							<View
 								className='list-item'
-								onClick={() =>{
+								onClick={() => {
 									Taro.navigateTo({
-										url: `/job-detail/index?title=岗位详情&des=业务产品线下推广专员&desEn=Business Product...&location=${item?.location}&logo=${item?.cover_image}&name=${item?.enterprise_name}&enterpriseIntroduce=${item?.enterprise_introduce}&positionIntroduce=就是大家佛教圣地`,
-									})
-								}
-									
-								}>
+										url: `/job-detail/index?title=岗位详情&des=业务产品线下推广专员&desEn=Business Product...&location=${item?.enterprise_location}&logo=${item?.enterprise_cover_image}&name=${item?.enterprise_name}&enterpriseIntroduce=公司简介&positionIntroduce=${item.position_introduce}`,
+									});
+								}}>
 								<Text className='item-y'>业务产品线下推广专员·Business Product...</Text>
 								<View className='item-job'>
 									<Text className='job-t'>岗位职责</Text>·Job responsibilities
@@ -43,8 +41,8 @@ export default function InternshipGuidance() {
 								</View>
 								<CompanyInfo
 									name={item?.enterprise_name}
-									logo={item?.cover_image}
-									location={item?.location}
+									logo={item?.enterprise_cover_image}
+									location={item?.enterprise_location}
 								/>
 							</View>
 						);
