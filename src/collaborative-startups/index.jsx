@@ -1,28 +1,52 @@
-import { Text, View } from "@tarojs/components";
-import React from "react";
+import { RichText, Text, View } from "@tarojs/components";
+import React, { useEffect, useState } from "react";
 import HomePubList from "../components/home-pub/list";
 import "./index.less";
 import Taro from "@tarojs/taro";
+import { getEnterpriseInfoList, getEmploymentGuideListDetail } from "../api/globApi";
+import { Empty } from "@antmjs/vantui";
+import MyDialog from "../components/home-pub/dialog";
 export default function CollaborativeStartups() {
+	const [enterPiseInfoList, setEnterPiseInfoList] = useState([]);
+	const [description, setDescription] = useState(undefined);
+	useEffect(() => {
+		getEnterpriseInfoList().then((res) => {
+			setEnterPiseInfoList(res.data);
+		});
+
+		getEmploymentGuideListDetail({ employment_guide_type: 3 }).then((res) => {
+			setDescription(res.data.description);
+		});
+	}, []);
+
 	return (
 		<>
-			<HomePubList title='合作创业公司' bgTitle='合作创业公司'>
-				<View
-					className='list-item'
-					onClick={() =>
-						Taro.navigateTo({
-							url: "/company-detail/index",
-						})
-					}>
-					<Text className='item-y'>西部(重庆)科学城国际人才创新创业服务港·... Product...</Text>
-					<View className='item-job'>
-						<Text className='job-t'>公司简介</Text>·Company Profile
-					</View>
-					<View className='item-job-des'>
-						西部(重庆)科学城国际人才创新创业服务港举行,旨在培养一批“会管理、懂金融、通市场、擅转化”的复合型孵化...
-					</View>
-					<View className='po'>渝北区·观音桥</View>
-				</View>
+			<HomePubList title='合作创业公司' bgTitle='合作创业公司' type={4}>
+				{enterPiseInfoList && enterPiseInfoList.length ? (
+					enterPiseInfoList.map((item) => {
+						return (
+							<View
+								className='list-item'
+								onClick={() =>
+									Taro.navigateTo({
+										url: `/company-detail/index?name=${item.enterprise_name}&logo=${item.cover_image}&enterpriseIntroduce=${item.enterprise_introduce}&location=${item.location}`,
+									})
+								}>
+								<Text className='item-y'>{item.enterprise_name}</Text>
+								<View className='item-job'>
+									<Text className='job-t'>公司简介</Text>·Company Profile
+								</View>
+								<View className='item-job-des'>
+									<RichText nodes={item.enterprise_introduce} />
+								</View>
+								<View className='po'>{item.location}</View>
+							</View>
+						);
+					})
+				) : (
+					<Empty />
+				)}
+				{description && <MyDialog setDescription={setDescription} description={description} />}
 			</HomePubList>
 		</>
 	);

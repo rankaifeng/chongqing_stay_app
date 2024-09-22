@@ -66,3 +66,9 @@ export const getEmploymentGuideListDetai = params => get('/employment_manage/emp
  */
 export const getProductInfoList = params => get('/employment_manage/product_info/product_info_list', params)
 
+/**
+ * 企业列表
+ * @param {*} params 
+ * @returns 
+ */
+export const getEnterpriseInfoList= params => get('/employment_manage/enterprise_info/enterprise_info_list', params)
