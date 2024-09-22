@@ -71,4 +71,11 @@ export const getProductInfoList = params => get('/employment_manage/product_info
  * @param {*} params 
  * @returns 
  */
-export const getEnterpriseInfoList= params => get('/employment_manage/enterprise_info/enterprise_info_list', params)
+export const getEnterpriseInfoList = params => get('/employment_manage/enterprise_info/enterprise_info_list', params)
+
+/**
+ * 活动申请列表
+ * @param {*} p
+ * @returns
+ */
+export const tourismSubscribeList = params => get("/cultural_tourism_manage/cultural_tourism_subscribe/cultural_tourism_subscribe_list", params);
