@@ -5,7 +5,7 @@ import NavigationBar from "../components/navigation-bar";
 export default function Privacy() {
 	return (
 		<View style={{ padding: "5px 10px", height: "98%", overflowY: "auto" }}>
-			<NavigationBar title='办事指南' isBackIcon={true} backIconColor='#000' titleColor='#000' isWeight={600} />
+			<NavigationBar title='隐私协议' isBackIcon={true} backIconColor='#000' titleColor='#000' isWeight={600} />
 			<View style={{ fontWeight: "600", fontSize: "18px", padding: "5px" }}>隐私条款 </View>
 			<View style={{ fontWeight: "600", fontSize: "14px", padding: "5px" }}>一、前言</View>
 			我们深知用户的个人隐私对于每一位用户而言都至关重要。因此，我们致力于保护用户的隐私信息，并严格遵守相关的法律法规。本隐私协议旨在详细阐述我们如何收集、使用、共享和保护用户的个人信息，以及用户在此过程中的权利。
