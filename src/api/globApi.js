@@ -31,3 +31,30 @@ export const getSchoolInfoList = params => get('/school_manage/school_info/schoo
  * @returns 
  */
 export const getResidenceNoticeList = params => get('/information_manage/residence_notice/residence_notice_list', params)
+/**
+ * 签证提醒
+ * @param {*} p
+ * @returns
+ */
+export const remindInfoList = params => get("/remind_manage/remind_info/remind_info_list", params);
+
+/**
+ * 实习实训
+ * @param {*} params 
+ * @returns 
+ */
+export const getEnterpriseInfoList = params => get("/employment_manage/enterprise_info/enterprise_info_list", params)
+
+/**
+ * 弹窗
+ * @param {*} params 
+ * @returns 
+ */
+export const getEmploymentGuideListDetail = params => get('/employment_manage/employment_guide/employment_guide_list_detail', params)
+
+/**
+ * 指南
+ * @param {*} params 
+ * @returns 
+ */
+export const getEmploymentGuideListDetai = params => get('/employment_manage/employment_guide/employment_guide_list_detail', params)

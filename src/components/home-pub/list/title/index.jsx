@@ -3,9 +3,9 @@ import React from "react";
 import "./index.less";
 import { Icon } from "@antmjs/vantui";
 import Taro from "@tarojs/taro";
-export default function ListTitle() {
+export default function ListTitle({ type }) {
 	return (
-		<View className='list-title' onClick={() => Taro.navigateTo({ url: "/page-service-guide/index" })}>
+		<View className='list-title' onClick={() => Taro.navigateTo({ url: `/page-service-guide/index?type=${type}` })}>
 			<View className='title-bg' style={{ height: "80px" }}>
 				办事指南·Clerical Guidelines
 			</View>
