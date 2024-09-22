@@ -6,7 +6,6 @@ import renImg from "../../imgs/ren.png";
 import { ActionSheet, Icon, Image } from "@antmjs/vantui";
 import phoneImg from "../../imgs/phone.svg";
 import liuyanImg from "../../imgs/liuyan.svg";
-import PhoneModal from "../../components/phone-modal";
 import Taro from "@tarojs/taro";
 export default function Consult() {
 	const [phone, setPhone] = useState(undefined);
@@ -29,10 +28,10 @@ export default function Consult() {
 					<Icon className='arrow' name='arrow' color='rgba(191, 191, 191, 1)' />
 				</View>
 
-				<View className='c-c-item'>
+				<View className='c-c-item' onClick={() => Taro.navigateTo({ url: "/pages/consult/message/index" })}>
 					<Image src={liuyanImg} style={{ width: "50px", height: "50px" }} />
 					<View className='c-right'>
-						<View className='phone'>拨打电话</View>
+						<View className='phone'>留言</View>
 						<View className='phone-des'>Make a telephone call</View>
 					</View>
 					<Icon className='arrow' name='arrow' color='rgba(191, 191, 191, 1)' />
@@ -55,7 +54,6 @@ export default function Consult() {
 					]}
 				/>
 			)}
-			{/* <PhoneModal phone={phone} setPhone={setPhone} /> */}
 		</View>
 	);
 }

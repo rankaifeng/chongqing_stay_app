@@ -52,6 +52,9 @@ export default defineAppConfig({
     }, {
       root: 'studay-chongqing',
       pages: ['index', 'detail/index']
+    }, {
+      root: 'pages/consult/message',
+      pages: ['index']
     }
   ],
   window: {
