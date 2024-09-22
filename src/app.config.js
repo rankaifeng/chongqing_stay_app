@@ -1,5 +1,6 @@
 export default defineAppConfig({
   pages: [
+    'pages/login/index',
     'pages/home/index',
     'pages/charm/index',
     'pages/consult/index',
@@ -54,6 +55,9 @@ export default defineAppConfig({
       pages: ['index', 'detail/index']
     }, {
       root: 'pages/consult/message',
+      pages: ['index']
+    }, {
+      root: 'privacy',
       pages: ['index']
     }
   ],
