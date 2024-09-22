@@ -1,16 +1,14 @@
-import { Text, View } from "@tarojs/components";
+import { Image, Text, View } from "@tarojs/components";
 import React from "react";
 import "./index.less";
-import { Ellipsis, Image } from "@antmjs/vantui";
-export default function ImgContent({ onClick }) {
+import { Ellipsis } from "@antmjs/vantui";
+export default function ImgContent({ onClick, imgUrl, title, time }) {
 	return (
 		<View className='img-content' onClick={onClick}>
-			<Image round radius={10} className='imgs' src='https://img.yzcdn.cn/vant/cat.jpeg' />
+			<Image mode='aspectFill' className='imgs' src={imgUrl || "https://img.yzcdn.cn/vant/cat.jpeg"} />
 			<View className='left'>
-				<Ellipsis rows={2} hiddenAction className='el'>
-					就是大家放松的垃圾士大就是大家放松的垃圾士大夫似的士大夫似的就是大家放松的垃圾士大夫似的士大夫似的夫似的士大夫似的
-				</Ellipsis>
-				<View className='time'>2024-02-12</View>
+				<View className='el ellipsis2'>{title}</View>
+				<View className='time'>{time}</View>
 			</View>
 		</View>
 	);

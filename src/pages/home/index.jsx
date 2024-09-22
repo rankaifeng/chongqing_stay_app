@@ -15,6 +15,7 @@ import dianshangImg from "../../imgs/dianshang.svg";
 import gognsiImg from "../../imgs/gongsi.svg";
 import Taro from "@tarojs/taro";
 import SwiperImg from "./SwiperImg";
+import NewExpress from "./NewExpress";
 
 export default function Home() {
 	return (
@@ -60,11 +61,7 @@ export default function Home() {
 							},
 						]}
 					/>
-					<View className='t'>
-						<BgTitle title='要闻速递' size='18px' />
-						<Text>·News Express</Text>
-					</View>
-					<ImgContent onClick={() => Taro.navigateTo({ url: "/news-express/index" })} />
+					<NewExpress />
 					<View className='t'>
 						<BgTitle title='留学重庆' size='18px' />
 						<Text>·Study in Chongqing</Text>
