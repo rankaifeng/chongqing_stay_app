@@ -24,3 +24,10 @@ export const getNewsExpressList = params => get('/information_manage/news_expres
  * @returns 
  */
 export const getSchoolInfoList = params => get('/school_manage/school_info/school_info_list', params)
+
+/**
+ * 居留须知
+ * @param {*} params 
+ * @returns 
+ */
+export const getResidenceNoticeList = params => get('/information_manage/residence_notice/residence_notice_list', params)
