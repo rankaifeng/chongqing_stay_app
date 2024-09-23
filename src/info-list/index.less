@@ -70,9 +70,12 @@
 
     .info-list {
         width: 95%;
-        margin: 20px auto;
-        height: 85%;
-        background-color: #fff;
+        margin: 10% auto;
+        height: 80%;
+        background-color: #f1f6ff;
+        border-radius: 10px;
+
+
 
 
         .title {
@@ -84,11 +87,33 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background-color: #deecff;
+
+            }
+
+            .two {
+                border-top: 5px solid #fff;
+                border-right: 5px solid #fff;
+                border-left: 5px solid #fff;
             }
 
             .active {
-                background-color: aquamarine;
+                background-color: #f1f6ff;
                 color: red;
+                // transform: translateY(-40px);
+                animation: moveDown 0.5s forwards;
+                border-top: 5px solid #fff;
+                border-left: 5px solid #fff;
+            }
+        }
+
+        @keyframes moveDown {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-40px);
             }
         }
 

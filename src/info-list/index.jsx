@@ -34,7 +34,12 @@ const InfoList = () => {
             <View className='info-list'>
                 <View className='title'>
                     {datas.map(item => {
-                        return <View onClick={() => onItemClick(item)} className={`one ${title === item.name ? 'active' : ''}`}>{item.name}</View>
+                        return (
+                            <View onClick={() => onItemClick(item)} className={`one ${title === item.name ? 'active' : 'two'}`}>
+                                {item.name}
+                                <View></View>
+                            </View>
+                        )
                     })}
                 </View>
                 <View className='list-content'>
