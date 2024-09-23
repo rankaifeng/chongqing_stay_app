@@ -59,6 +59,9 @@ export default defineAppConfig({
     }, {
       root: 'privacy',
       pages: ['index']
+    }, {
+      root: 'phone-login',
+      pages: ['index']
     }
   ],
   window: {
@@ -67,6 +70,7 @@ export default defineAppConfig({
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black',
   },
+  requiredUserInfo: ['PhoneNumber'],
   tabBar: {
     color: '#666',
     selectedColor: '#437CFF',

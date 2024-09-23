@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./index.less";
-import { Image, View } from "@tarojs/components";
+import { Image, ScrollView, View } from "@tarojs/components";
 import NavigationBar from "../../../components/navigation-bar";
 import { Field } from "@antmjs/vantui";
 import Taro from "@tarojs/taro";
@@ -8,7 +8,6 @@ import { getContactInfoListDetail, contactInfoAdd } from "../../../api/globApi";
 export default function Message() {
 	const [value, setValue] = useState(undefined);
 	const [messageList, setMessageList] = useState([]);
-
 	const onSendMsg = () => {
 		if (!value) {
 			Taro.showToast({ title: "请输入内容", icon: "none" });
@@ -22,6 +21,14 @@ export default function Message() {
 
 	useEffect(() => {
 		rquestMessageList();
+
+		let time = setInterval(() => {
+			rquestMessageList();
+		}, 10000);
+
+		return () => {
+			clearInterval(time)
+		}
 	}, [])
 
 	const rquestMessageList = () => {
@@ -49,7 +56,7 @@ export default function Message() {
 		<View className='message'>
 			<NavigationBar title='留言' isBackIcon={true} backIconColor='#000' titleColor='#000' isWeight={600} />
 
-			<View className='message-content'>
+			<ScrollView scrollY className='message-content'>
 				{messageList.length
 					? messageList.map((item) => {
 						return (
@@ -70,7 +77,7 @@ export default function Message() {
 						);
 					})
 					: null}
-			</View>
+			</ScrollView>
 			<View className='send-content'>
 				<View className='send-input'>
 					<Field

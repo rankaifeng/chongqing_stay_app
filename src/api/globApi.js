@@ -1,6 +1,12 @@
 import Taro from '@tarojs/taro';
 import { get, post, postFile, put } from '../server/httpService';
 
+/**
+ * 登录验证
+ * @param {*} data 
+ * @returns 
+ */
+export const userLoginChange = data => post('/user_manage/user_login/country_passport_verify', data);
 
 export const getStudentList = (params) => get('/user_manage/student_info/student_info_list', { page: 1, limit: 10 });
 
@@ -100,3 +106,10 @@ export const getContactInfoListDetail = params => get('/contact_manage/contact_i
  * @returns 
  */
 export const contactInfoAdd = params => post('/contact_manage/contact_info/contact_info_add', params)
+/**
+ * 用户登录
+ * @param {*} p
+ * @returns
+ */
+export const getUserInfo = (p) => post("/user_manage/user_login/wechat_login", p);
+
