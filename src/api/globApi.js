@@ -86,3 +86,17 @@ export const tourismSubscribeList = params => get("/cultural_tourism_manage/cult
  * @returns 
  */
 export const getEnterpriseDetail = params => get('/employment_manage/enterprise_info/enterprise_info_list_detail', params)
+
+/**
+ * 查询聊天记录
+ * @param {*} params 
+ * @returns 
+ */
+export const getContactInfoListDetail = params => get('/contact_manage/contact_info/contact_info_list_detail', params)
+
+/**
+ * 新增聊天记录
+ * @param {*} params 
+ * @returns 
+ */
+export const contactInfoAdd = params => post('/contact_manage/contact_info/contact_info_add', params)
