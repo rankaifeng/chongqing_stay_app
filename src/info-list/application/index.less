@@ -1,6 +1,8 @@
 .ship {
     height: 100vh;
-
+    background:
+        linear-gradient(to bottom, transparent, #f0f1f5 700px),
+        linear-gradient(to right, #9cb5d1 20%, #edf3fd 80%);
 
     .ship-date {
         width: 95%;
@@ -29,7 +31,7 @@
 
     .ship-mark {
         width: 95%;
-        background-color: #fff;
+       
         margin: 20px auto;
         padding: 15px;
 
@@ -44,15 +46,18 @@
             background-color: #F7F8FA;
             width: 100%;
             padding: 10px;
-            margin: 10px;
             font-size: 26px;
+            box-sizing: border-box;
             color: #000;
         }
     }
 
     .top {
-        height: 90vh;
         overflow-y: auto;
+        border-radius: 10px;
+        width: 95%;
+        margin: 20px auto;
+        background-color: #fff;
 
         &::-webkit-scrollbar {
             display: none;
@@ -61,12 +66,15 @@
 
     .sub {
         height: 5vh;
-        background-color: #2955AE;
+        background-color: rgba(65, 134, 253, 1);
         color: #fff;
         width: 95%;
         margin: 0 auto;
         text-align: center;
         border-radius: 10px;
         line-height: 5vh;
+        position: absolute;
+        bottom: 3%;
+        left: 2.5%;
     }
 }

@@ -62,7 +62,8 @@ export default defineAppConfig({
     }, {
       root: 'phone-login',
       pages: ['index']
-    }, {
+    }, 
+    {
       root: 'info-list',
       pages: ['index', 'detail/index', 'application/index']
     }

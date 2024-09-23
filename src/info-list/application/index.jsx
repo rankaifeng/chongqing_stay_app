@@ -3,6 +3,7 @@ import Taro from '@tarojs/taro'
 import { View, Input, Textarea, Picker } from '@tarojs/components'
 import './index.less'
 import { tourismSubscribeAdd } from '../../api/globApi'
+import NavigationBar from '../../components/navigation-bar'
 
 
 const InfoAapplication = () => {
@@ -44,6 +45,7 @@ const InfoAapplication = () => {
     }
     return (
         <View className='ship'>
+            <NavigationBar title='报名' isBackIcon={true} backIconColor='#000' titleColor='#000' isWeight={600} />
 
             <View className='top'>
                 <View className='ship-date'>
