@@ -14,6 +14,7 @@ export default function JobPageDetail({
 	enterpriseIntroduce,
 	positionIntroduce,
 	enterpriseDes,
+	enterpriseId
 }) {
 	return (
 		<View className='job-detail'>
@@ -37,6 +38,7 @@ export default function JobPageDetail({
 						enterpriseDes={enterpriseDes}
 						logo={logo}
 						name={name}
+						enterpriseId={enterpriseId}
 						location={location}
 						enterpriseIntroduce={enterpriseIntroduce}
 					/>

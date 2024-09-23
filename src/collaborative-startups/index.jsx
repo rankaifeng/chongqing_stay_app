@@ -29,7 +29,7 @@ export default function CollaborativeStartups() {
 								className='list-item'
 								onClick={() =>
 									Taro.navigateTo({
-										url: `/company-detail/index?name=${item.enterprise_name}&logo=${item.cover_image}&enterpriseIntroduce=${item.enterprise_introduce}&location=${item.location}`,
+										url: `/company-detail/index?name=${item.enterprise_name}&logo=${item.cover_image}&enterpriseIntroduce=${item.enterprise_introduce}&location=${item.location}&enterpriseId=${item.id}`,
 									})
 								}>
 								<Text className='item-y'>{item.enterprise_name}</Text>

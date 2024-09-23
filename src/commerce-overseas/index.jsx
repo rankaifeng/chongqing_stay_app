@@ -31,7 +31,7 @@ export default function CommerceOverseas() {
 								onClick={() => {
 									Taro.preload({ enterpriseIntroduce: item?.product_introduce });
 									Taro.navigateTo({
-										url: `/job-detail/index?title=产品详情&des=${item?.product_name}&name=${item?.enterprise_name}&logo=${item?.enterprise_cover_image}&location=渝北观音桥&enterpriseDes=企业和技术交底史蒂夫纳什电脑辐射`,
+										url: `/job-detail/index?title=产品详情&des=${item?.product_name}&name=${item?.enterprise_name}&logo=${item?.enterprise_cover_image}&enterpriseId=${item.enterprise_id}`,
 									});
 								}}>
 								<Image mode='aspectFill' className='imgs' src={item?.cover_image_list[0]} />

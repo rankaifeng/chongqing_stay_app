@@ -29,7 +29,7 @@ export default function InternshipGuidance() {
 								className='list-item'
 								onClick={() => {
 									Taro.navigateTo({
-										url: `/job-detail/index?title=岗位详情&des=业务产品线下推广专员&desEn=Business Product...&location=${item?.enterprise_location}&logo=${item?.enterprise_cover_image}&name=${item?.enterprise_name}&enterpriseIntroduce=公司简介&positionIntroduce=${item.position_introduce}`,
+										url: `/job-detail/index?title=岗位详情&des=业务产品线下推广专员&desEn=Business Product...&location=${item?.enterprise_location}&logo=${item?.enterprise_cover_image}&name=${item?.enterprise_name}&enterpriseIntroduce=公司简介&positionIntroduce=${item.position_introduce}&enterpriseId=${item.enterprise_id}`,
 									});
 								}}>
 								<Text className='item-y'>业务产品线下推广专员·Business Product...</Text>
@@ -40,6 +40,7 @@ export default function InternshipGuidance() {
 									<RichText nodes={item?.position_introduce} />
 								</View>
 								<CompanyInfo
+									enterpriseId={item?.enterprise_id}
 									name={item?.enterprise_name}
 									logo={item?.enterprise_cover_image}
 									location={item?.enterprise_location}

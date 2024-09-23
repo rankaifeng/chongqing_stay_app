@@ -12,6 +12,7 @@ export default function JobDetail() {
 			name={mParams?.name}
 			location={mParams?.location}
 			logo={mParams?.logo}
+			enterpriseId={mParams?.enterpriseId}
 			positionIntroduce={mParams?.positionIntroduce}
 			enterpriseDes={mParams?.enterpriseDes}
 			enterpriseIntroduce={

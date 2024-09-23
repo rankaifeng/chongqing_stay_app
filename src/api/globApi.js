@@ -79,3 +79,10 @@ export const getEnterpriseInfoList = params => get('/employment_manage/enterpris
  * @returns
  */
 export const tourismSubscribeList = params => get("/cultural_tourism_manage/cultural_tourism_subscribe/cultural_tourism_subscribe_list", params);
+
+/**
+ * 企业详情
+ * @param {*} params 
+ * @returns 
+ */
+export const getEnterpriseDetail = params => get('/employment_manage/enterprise_info/enterprise_info_list_detail', params)
