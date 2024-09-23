@@ -28,9 +28,7 @@ export default function RefreshList({
 	useEffect(() => {
 		if (otherData || isLoad) {
 			setData([]);
-			setTimeout(() => {
-				onRefresh();
-			}, 1000);
+			onRefresh();
 		}
 	}, [otherData, isLoad]);
 	/**

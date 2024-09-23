@@ -1,0 +1,102 @@
+.info-item {
+    background-color: #edf7ff;
+    border-radius: 10px;
+    width: 95%;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+
+    .info-title {
+        padding: -1px 0 10px 0;
+        color: #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .title-en {
+        padding: 0 0 10px 0;
+        color: #979DA6;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 10px 0;
+        font-size: 26px;
+    }
+
+    .info-bg {
+        width: 100%;
+        overflow: hidden;
+        height: 330px;
+        margin: 10px 0;
+        position: relative;
+    }
+
+    .info-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .info-mark {
+        position: absolute;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        bottom: 0;
+        color: #fff;
+        border-radius: 0 0 10px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 22px;
+    }
+
+    .mark1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+
+}
+
+.info {
+    height: 100%;
+    background:
+        linear-gradient(to bottom, transparent, #f0f1f5 700px),
+        linear-gradient(to right, #9cb5d1 20%, #edf3fd 80%);
+
+    .info-list {
+        width: 95%;
+        margin: 20px auto;
+        height: 85%;
+        background-color: #fff;
+
+
+        .title {
+            height: 100px;
+            display: flex;
+
+            .one {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .active {
+                background-color: aquamarine;
+                color: red;
+            }
+        }
+
+        .list-content {
+            margin-top: 20px;
+            height: calc(100% - 100px);
+            overflow: hidden;
+            overflow-y: auto;
+        }
+    }
+}

@@ -17,6 +17,7 @@ import Taro from "@tarojs/taro";
 import SwiperImg from "./SwiperImg";
 import NewExpress from "./NewExpress";
 import StudayScholl from "./StudayScholl";
+import Window from "./Window";
 
 export default function Home() {
 	return (
@@ -64,11 +65,7 @@ export default function Home() {
 					/>
 					<NewExpress />
 					<StudayScholl />
-					<View className='t'>
-						<BgTitle title='文旅之窗' size='18px' />
-						<Text>·Window on Culture and Tourism</Text>
-					</View>
-					<ImgContent />
+					<Window />
 					<View className='t'>
 						<BgTitle title='创新创业' size='18px' />
 						<Text>·Innovation and entrepreneurship</Text>

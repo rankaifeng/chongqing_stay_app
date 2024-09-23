@@ -113,3 +113,17 @@ export const contactInfoAdd = params => post('/contact_manage/contact_info/conta
  */
 export const getUserInfo = (p) => post("/user_manage/user_login/wechat_login", p);
 
+/**
+ * 文旅之窗
+ * @param {*} p 
+ * @returns 
+ */
+export const culturalTourismList = p => get('/cultural_tourism_manage/cultural_tourism/cultural_tourism_list', p)
+/**
+ * 小程序看到当前详情的状态
+ * @param {*} p
+ * @returns
+ */
+export const tourismListDetail = (p) => get("/cultural_tourism_manage/cultural_tourism/cultural_tourism_list_detail", p);
+
+export const tourismSubscribeAdd = (p) => post("/cultural_tourism_manage/cultural_tourism_subscribe/cultural_tourism_subscribe_add", p);
