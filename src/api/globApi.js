@@ -150,3 +150,10 @@ export const innovationEntrepreneurship = (p) => post("/innovation_manage/approv
  * @returns 
  */
 export const uploadFile = (p) => post('/student_manage/student_info/student_info_visa_application_doc_upload', p);
+
+/**
+ * 申请公函
+ * @param {*} p 
+ * @returns 
+ */
+export const applicationRecordInfoAdd = p => post("/student_manage/student_info/application_record_info_add", p)
