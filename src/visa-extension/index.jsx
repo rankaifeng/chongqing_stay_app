@@ -76,8 +76,7 @@ export default function VisaExtension() {
 							success: res => {
 								const mPath = res.tempFiles[0].path
 								fileUpload({ file_value: mPath, file_type: 3 }).then(res => {
-									console.log(res);
-									uploadFile({ url: res.data[0].file_url }).then(res => {
+									uploadFile({ visa_application_doc: res.data[0].file_url }).then(res => {
 										Taro.showToast({ title: res.msg, icon: 'none' })
 										setDiagShow(false)
 										setSheetShow(false)

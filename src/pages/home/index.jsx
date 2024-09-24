@@ -18,10 +18,12 @@ import SwiperImg from "./SwiperImg";
 import NewExpress from "./NewExpress";
 import StudayScholl from "./StudayScholl";
 import Window from "./Window";
+import Tabs from "../../components/Tabs";
 
 export default function Home() {
 	return (
 		<View className='home'>
+			{/* <Tabs/> */}
 			<View className='home-content'>
 				<NavigationBar leftTitle='悦留重庆' />
 				<View className='v'>

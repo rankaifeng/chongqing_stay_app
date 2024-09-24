@@ -149,4 +149,4 @@ export const innovationEntrepreneurship = (p) => post("/innovation_manage/approv
  * @param {*} p 
  * @returns 
  */
-export const uploadFile = (p) => post('/base_manage/file_info/file_info_upload', p);
+export const uploadFile = (p) => post('/student_manage/student_info/student_info_visa_application_doc_upload', p);

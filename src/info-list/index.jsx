@@ -17,7 +17,6 @@ const InfoList = () => {
     const [title, setTitle] = useState('热点推荐')
     const onItemClick = item => {
         setTitle(item.name)
-        setIsLoad(true)
         setOtherData({
             list_status: 1,
             cultural_type: item.name === '热点推荐' ? 1 : 2

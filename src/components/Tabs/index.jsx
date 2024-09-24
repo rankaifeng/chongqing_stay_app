@@ -7,17 +7,10 @@ const Tabs = () => {
 
         <NavigationBar title='办事指南' isBackIcon={true} backIconColor='#000' titleColor='#000' isWeight={600} />
 
-        <View className="c">
-            <View class="tab-page">
-                <View className="tab-list">
-                    <View className="tab-item tab-selected">
-                        <View>1111</View>
-                    </View>
-                    <View className="tab-item">
-                        <View>2222</View>
-                    </View>
-                </View>
-            </View>
+        <View className="tab-list">
+
+            <View className="tab-item">111</View>
+            <View className="tab-item tab-selected">222</View>
         </View>
     </View>
 
