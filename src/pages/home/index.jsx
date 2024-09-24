@@ -1,10 +1,10 @@
 import { View, Text, Image } from "@tarojs/components";
-import React from "react";
+import React, { useState } from "react";
 import "./index.less";
 import NavigationBar from "../../components/navigation-bar";
 import GridContent from "../../components/grid-content";
 import BgTitle from "../../components/bg-title";
-import ImgContent from "../../components/img-content";
+
 import xuImg from "../../imgs/xu.svg";
 import banshiImg from "../../imgs/banshi.svg";
 import tixingImg from "../../imgs/tixing.svg";

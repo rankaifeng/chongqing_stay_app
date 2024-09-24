@@ -143,3 +143,10 @@ export const fileUpload = p => post('/base_manage/file_info/file_info_upload', p
  * @returns
  */
 export const innovationEntrepreneurship = (p) => post("/innovation_manage/approvement/approvement_add", p);
+
+/**
+ * 上传文件
+ * @param {*} p 
+ * @returns 
+ */
+export const uploadFile = (p) => post('/base_manage/file_info/file_info_upload', p);
