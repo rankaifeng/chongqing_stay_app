@@ -1,5 +1,5 @@
 import { Text, View } from "@tarojs/components";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./index.less";
 import NavigationBar from "../../components/navigation-bar";
 import Image from "@antmjs/vantui/es/image";
@@ -9,14 +9,32 @@ import zy from "../../imgs/zy.svg";
 import xy from "../../imgs/xy.svg";
 import Taro from "@tarojs/taro";
 export default function My() {
+
+	const [userInfo, setUserInfo] = useState(undefined)
+	useEffect(() => {
+		const mUser = Taro.getStorageSync('userInfo')
+		if (mUser) {
+			setUserInfo(JSON.parse(mUser))
+		} else {
+			Taro.navigateTo({ url: '/user-login/index' })
+		}
+	}, [])
+
+	function calculateDays(startTimestamp) {
+		const timestamp = Math.floor(Date.now() / 1000);
+		const oneDay = 24 * 60 * 60; // 一天的毫秒数
+		// 计算天数
+		const daysDifference = Math.floor((timestamp - startTimestamp) / oneDay);
+		return daysDifference + 2;
+	}
 	return (
 		<View className='my'>
 			<View className='my-content'>
 				<NavigationBar leftTitle='个人中心' />
 				<View className='my-top'>
-					<Text className='name'>亮亮的小佩服哟 [点击登录]</Text>
-					<Text className='day'>加入悦留学重庆第 345 天</Text>
-					<Image className='avatar' src='https://img.yzcdn.cn/vant/cat.jpeg' round />
+					<Text className='name'>{userInfo?.student_name} [点击登录]</Text>
+					<Text className='day'>加入悦留学重庆第 {calculateDays(userInfo?.create_time)} 天</Text>
+					<Image className='avatar' src={userInfo?.head_url || 'https://img.yzcdn.cn/vant/cat.jpeg'} round />
 				</View>
 
 				<View className='student-info'>
@@ -25,7 +43,7 @@ export default function My() {
 					<View className='info-content'>
 						<View className='info-item'>
 							<Text className='xy'>学院·Colleges</Text>
-							<Text className='xy-name'>理学院</Text>
+							<Text className='xy-name'>{userInfo?.school_college}</Text>
 							<Image
 								src={xy}
 								style={{
@@ -39,7 +57,7 @@ export default function My() {
 						</View>
 						<View className='info-item ml'>
 							<Text className='xy'>专业·Professions</Text>
-							<Text className='xy-name'>新闻传媒</Text>
+							<Text className='xy-name'>{userInfo?.school_speciality}</Text>
 							<Image
 								src={zy}
 								style={{
@@ -66,7 +84,9 @@ export default function My() {
 					<Icon name='arrow' size='16px' style={{ marginRight: "10px" }} />
 				</View>
 
-				<View className='exit'>退出账号·Abort</View>
+				<View className='exit' onClick={() => {
+					Taro.reLaunch({ url: "/user-login/index" })
+				}}>退出账号·Abort</View>
 			</View>
 		</View>
 	);

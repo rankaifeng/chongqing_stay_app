@@ -21,7 +21,7 @@ export default function SwiperImg() {
 		});
 	}, []);
 	return (
-		<Swiper className='swiper' autoplay indicatorDots={true} interval={duration}>
+		<Swiper className='swiper' autoplay indicatorDots={true} interval={duration} indicatorActiveColor='#fff' >
 			{imags.map((item, index) => (
 				<SwiperItem key={`swiper#demo1${index}`}>
 					<Image className='img' mode='aspectFill' src={item} />

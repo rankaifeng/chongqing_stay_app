@@ -1,14 +1,14 @@
 import { Button, Image, Text, View } from "@tarojs/components";
 import React, { useRef, useState } from "react";
-import NavigationBar from "../../components/navigation-bar";
+import NavigationBar from "../components/navigation-bar";
 import "./index.less";
-import teBgImg from "../../imgs/te-bg.svg";
-import pBgImg from "../../imgs/p-bg.png";
-import BgTitle from "../../components/bg-title";
+import teBgImg from "../imgs/te-bg.svg";
+import pBgImg from "../imgs/p-bg.png";
+import BgTitle from "../components/bg-title";
 import { Checkbox, Field, Radio } from "@antmjs/vantui";
 import Taro from "@tarojs/taro";
-import { userLoginChange } from "../../api/globApi";
-export default function Login() {
+import { userLoginChange } from "../api/globApi";
+export default function UserLogin() {
 	const [value, setValue] = useState(false);
 	const [countryName, setCountryName] = useState(undefined);
 	const [idNumber, setIDNumber] = useState(undefined)

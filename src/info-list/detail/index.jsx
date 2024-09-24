@@ -3,6 +3,7 @@ import Taro from '@tarojs/taro'
 import { View, Video, RichText, Image } from '@tarojs/components'
 import './index.less'
 import NavigationBar from '../../components/navigation-bar'
+import { tourismListDetail } from '../../api/globApi'
 
 const btnArray = [
     { id: 1, value: '活动未开始', en: 'Not Yet Started', color: 'gray' },
@@ -31,7 +32,7 @@ const InfoListDetail = () => {
     return (
         <View className='info-detail'>
             <NavigationBar isBackIcon={true} backIconColor='#fff' />
-            <Image mode='aspectFill' src='https://img.yzcdn.cn/vant/cat.jpeg' style={{ height: "220px" }} className='img-t' />
+            <Image mode='aspectFill' src={dataDetail?.cover_image} style={{ height: "220px" }} className='img-t' />
 
             <View className='to'>
                 <View className='to-title'>重庆文旅城</View>

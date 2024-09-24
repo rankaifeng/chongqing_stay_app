@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import '@antmjs/vantui/lib/index.css';
 import './app.less'
-
+import 'taro-ui/dist/style/index.scss' 
 
 class App extends Component {
 

@@ -9,7 +9,10 @@ import { get, post, postFile, put } from '../server/httpService';
 export const userLoginChange = data => post('/user_manage/user_login/country_passport_verify', data);
 
 export const getStudentList = (params) => get('/user_manage/student_info/student_info_list', { page: 1, limit: 10 });
-
+/**
+ * 办事指南
+ */
+export const getActionGuideList = params => get("/information_manage/action_guide/action_guide_list", params)
 /**
  * 首页轮播图
  * @param {*} params 
@@ -127,3 +130,16 @@ export const culturalTourismList = p => get('/cultural_tourism_manage/cultural_t
 export const tourismListDetail = (p) => get("/cultural_tourism_manage/cultural_tourism/cultural_tourism_list_detail", p);
 
 export const tourismSubscribeAdd = (p) => post("/cultural_tourism_manage/cultural_tourism_subscribe/cultural_tourism_subscribe_add", p);
+/**
+ * 文件上传
+ * @param {*} p
+ * @returns
+ */
+export const fileUpload = p => post('/base_manage/file_info/file_info_upload', p);
+
+/**
+ * 创新创业
+ * @param {*} p
+ * @returns
+ */
+export const innovationEntrepreneurship = (p) => post("/innovation_manage/approvement/approvement_add", p);

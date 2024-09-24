@@ -19,7 +19,7 @@ export default function Consult() {
 				<Image className='ren-bg' src={renImg} style={{ width: "185px", height: "198px" }} />
 			</View>
 			<View className='c-c'>
-				<View className='c-c-item' onClick={() => setPhone("22233333")}>
+				<View className='c-c-item' onClick={() => setPhone("12367")}>
 					<Image src={phoneImg} style={{ width: "50px", height: "50px" }} />
 					<View className='c-right'>
 						<View className='phone'>拨打电话</View>

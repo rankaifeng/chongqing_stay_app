@@ -1,6 +1,5 @@
 export default defineAppConfig({
   pages: [
-    // 'pages/login/index',
     'pages/home/index',
     'pages/charm/index',
     'pages/consult/index',
@@ -15,7 +14,7 @@ export default defineAppConfig({
       pages: ['index'],
     }, {
       root: 'service-guide',
-      pages: ['index'],
+      pages: ['index', 'detail/index'],
     }, {
       root: 'notify',
       pages: ['index'],
@@ -62,10 +61,13 @@ export default defineAppConfig({
     }, {
       root: 'phone-login',
       pages: ['index']
-    }, 
+    },
     {
       root: 'info-list',
       pages: ['index', 'detail/index', 'application/index']
+    }, {
+      root: 'user-login',
+      pages: ['index']
     }
   ],
   window: {
