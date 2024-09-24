@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./index.less";
-import { Image, ScrollView, View } from "@tarojs/components";
+import { Image, ScrollView, Text, View } from "@tarojs/components";
 import NavigationBar from "../../../components/navigation-bar";
 import { Field } from "@antmjs/vantui";
 import Taro from "@tarojs/taro";
@@ -60,25 +60,12 @@ export default function Message() {
 				{messageList.length
 					? messageList.map((item) => {
 						return (
-							<View className={item.isMe ? "message-content-right" : "message-content-item"}>
+							<View className={item.isMe ? "message received" : "message sent"}>
 								<View className='time'>{item.time}</View>
-								{item.isMe ? (
-									<>
-										<View className="i-c">
-											<Image className='item-img' src={item.img} />
-											<View className='item-des'>
-												<View className="i-c-c">{item.content}</View>
-											</View>
-										</View>
-										{/* <Image className='item-img' src={item.img} />
-										<View className='item-des'>{item.content}</View> */}
-									</>
-								) : (
-									<View className='item-right'>
-										<Image className='item-img' src={item.img} />
-										<View className='item-des'>{item.content}</View>
-									</View>
-								)}
+								<Image className='img' src={item.img} />
+								<View class="content">
+									<Text>{item.content}</Text>
+								</View>
 							</View>
 						);
 					})
