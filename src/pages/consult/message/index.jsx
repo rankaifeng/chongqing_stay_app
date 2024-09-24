@@ -56,7 +56,7 @@ export default function Message() {
 		<View className='message'>
 			<NavigationBar title='留言' isBackIcon={true} backIconColor='#000' titleColor='#000' isWeight={600} />
 
-			<ScrollView scrollY className='message-content'>
+			<View className='message-content'>
 				{messageList.length
 					? messageList.map((item) => {
 						return (
@@ -64,8 +64,14 @@ export default function Message() {
 								<View className='time'>{item.time}</View>
 								{item.isMe ? (
 									<>
-										<Image className='item-img' src={item.img} />
-										<View className='item-des'>{item.content}</View>
+										<View className="i-c">
+											<Image className='item-img' src={item.img} />
+											<View className='item-des'>
+												<View className="i-c-c">{item.content}</View>
+											</View>
+										</View>
+										{/* <Image className='item-img' src={item.img} />
+										<View className='item-des'>{item.content}</View> */}
 									</>
 								) : (
 									<View className='item-right'>
@@ -77,7 +83,7 @@ export default function Message() {
 						);
 					})
 					: null}
-			</ScrollView>
+			</View>
 			<View className='send-content'>
 				<View className='send-input'>
 					<Field
