@@ -33,7 +33,7 @@ export default function My() {
 				<NavigationBar leftTitle='个人中心' />
 				<View className='my-top'>
 					<Text className='name' onClick={() => Taro.navigateTo({ url: '/user-login/index' })}>{userInfo?.student_name} [点击登录]</Text>
-					<Text className='day'>加入悦留学重庆第 {calculateDays(userInfo?.create_time)} 天</Text>
+					<Text className='day'>加入悦留学重庆第 {userInfo?.create_time ? calculateDays(userInfo?.create_time) : 0} 天</Text>
 					<Image className='avatar' src={userInfo?.head_url || 'https://img.yzcdn.cn/vant/cat.jpeg'} round />
 				</View>
 
