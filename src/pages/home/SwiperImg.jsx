@@ -2,10 +2,11 @@ import { Image, Swiper, SwiperItem } from "@tarojs/components";
 import React, { useEffect, useState } from "react";
 import banImg from "../../imgs/ban.png";
 import { getHomeBannerImgs } from "../../api/globApi";
+import { useDidShow } from "@tarojs/taro";
 export default function SwiperImg() {
 	const [imags, setImags] = useState([]);
 	const [duration, setDuration] = useState(3000);
-	useEffect(() => {
+	useDidShow(() => {
 		getHomeBannerImgs().then((res) => {
 			const { code, data } = res;
 			if (code === 1) {

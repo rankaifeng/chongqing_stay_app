@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import BgTitle from "../../components/bg-title";
 import { Image, Text, View } from "@tarojs/components";
 import { getSchoolInfoList } from "../../api/globApi";
-import Taro from "@tarojs/taro";
+import Taro, { useDidShow } from "@tarojs/taro";
 
 export default function StudayScholl() {
 	const [schoolInfoList, setSchoolInfoList] = useState([]);
-	useEffect(() => {
+	useDidShow(() => {
 		getSchoolInfoList({ list_status: 1 }).then((res) => {
 			const { code, data } = res;
 			if (code === 1) {

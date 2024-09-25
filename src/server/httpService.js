@@ -9,7 +9,7 @@ const interceptor = chain => {
     requestParams.header = {
         ...requestParams.header,
         Authorization: `${token}`, //将token添加到头部
-        'X-App': 'app'
+        'X-Custom-Header': 'app'
     };
     return chain.proceed(requestParams).then(res => {
         return res;

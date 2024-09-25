@@ -3,11 +3,11 @@ import { culturalTourismList } from '../../api/globApi'
 import { Text, View } from '@tarojs/components';
 import Bgtitle from '../../components/bg-title'
 import ImgContent from '../../components/img-content'
-import Taro from '@tarojs/taro';
+import Taro, { useDidShow } from '@tarojs/taro';
 export default function Window() {
 
     const [windows, setWindows] = useState([])
-    useEffect(() => {
+    useDidShow(() => {
         culturalTourismList({ list_status: 1, page: 1, limit: 1 }).then(res => {
             setWindows(res.data)
         })

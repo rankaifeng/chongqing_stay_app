@@ -26,7 +26,7 @@ export default function Home() {
 				<NavigationBar leftTitle='悦留重庆' />
 				<View className='v'>
 					<SwiperImg />
-					<View className='t' onClick={() => Taro.navigateTo({ url: "/info-list/index" })}>
+					<View className='t'>
 						<BgTitle title='签证须知' size='18px' />
 						<Text>·Visa Information</Text>
 					</View>

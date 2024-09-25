@@ -26,11 +26,14 @@ const InfoListDetail = () => {
     }
     useEffect(() => {
         tourismListDetail({ id: dataDetail.id }).then(res => {
+            if (res.code === 0) {
+                Taro.showToast({ title: res.msg, icon: 'none' })
+            }
             setStr(btnArray.filter(item => item.id === res.data)[0])
         })
     }, [])
     return (
-        <View className='info-detail'>
+        <View className='info-detail' style={{ height: str ? '95vh' : '100vh' }}>
             <NavigationBar isBackIcon={true} backIconColor='#fff' />
             <Image mode='aspectFill' src={dataDetail?.cover_image} style={{ height: "220px" }} className='img-t' />
 

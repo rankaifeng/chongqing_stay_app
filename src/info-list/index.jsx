@@ -6,10 +6,11 @@ import './index.less'
 import RefreshList from '../components/refresh-list'
 import { culturalTourismList } from '../api/globApi'
 import Taro from '@tarojs/taro'
+import BgTitle from '../components/bg-title'
 const InfoList = () => {
 
     const [isLoad, setIsLoad] = useState(false)
-    const [datas, setDatas] = useState([{ name: '热点推荐' }, { name: '活动报名' }])
+    const [datas, setDatas] = useState([{ name: '热点推荐', en: 'Recommended' }, { name: '活动报名', en: 'Event Registration' }])
     const [otherData, setOtherData] = useState({
         list_status: 1,
         cultural_type: 1
@@ -32,11 +33,19 @@ const InfoList = () => {
             <NavigationBar title='文旅之窗' isBackIcon={true} backIconColor='#000' titleColor='#000' isWeight={600} />
             <View className='info-list'>
                 <View className='title'>
+                    {/* <View className="tab-item tab-selected">
+                        <View className="tab-label">水电费是的</View>
+                    </View>
+                    <View className="tab-item not-selected">
+                        <View className="tab-label">水电费是的</View>
+                    </View> */}
                     {datas.map(item => {
                         return (
-                            <View onClick={() => onItemClick(item)} className={`one ${title === item.name ? 'active' : 'two'}`}>
-                                {item.name}
-                                <View></View>
+                            <View onClick={() => onItemClick(item)} className={`tab-item ${title === item.name ? 'tab-selected' : 'not-selected'}`}>
+                                <View className="tab-label">
+                                    {title === item.name ? <BgTitle title={item.name} size='28rpx' /> : <View className='tab-ch1'>{item.name}</View>}
+                                    <View className='tab-en1'>{item.en}</View>
+                                </View>
                             </View>
                         )
                     })}
