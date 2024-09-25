@@ -24,7 +24,13 @@ export default function VisaExtension() {
 			<Image src={pBgImg} className='te-p' style={{ width: "172px", height: "164px" }} />
 
 			<View className='visa-content'>
-				<View className='visa-c-item'>
+				<View className='visa-c-item' onClick={() => {
+					Taro.scanCode({
+						success: (res) => {
+							console.log(res)
+						}
+					})
+				}}>
 					<Image src={scanImg} className='san-img' />
 					<View className='visa-c-item-right'>
 						<View className='visa-c-item-title'>扫码签到</View>
@@ -38,14 +44,26 @@ export default function VisaExtension() {
 						<View className='visa-c-item-desc'>Digital sign-on</View>
 					</View>
 				</View>
-				<View className='visa-c-item' onClick={() => setSheetShow(true)}>
+				<View className='visa-c-item' onClick={() => {
+					if (Taro.getStorageSync('token')) {
+						setSheetShow(true)
+					} else {
+						Taro.navigateTo({ url: "/user-login/index" })
+					}
+				}}>
 					<Image src={qianImg} className='san-img' />
 					<View className='visa-c-item-right'>
 						<View className='visa-c-item-title'>签证申请表</View>
 						<View className='visa-c-item-desc'>Visa Application Form</View>
 					</View>
 				</View>
-				<View className='visa-c-item' onClick={() => Taro.navigateTo({ url: "/application-letter/index" })}>
+				<View className='visa-c-item' onClick={() => {
+					if (Taro.getStorageSync('token')) {
+						Taro.navigateTo({ url: "/application-letter/index" })
+					} else {
+						Taro.navigateTo({ url: "/user-login/index" })
+					}
+				}}>
 					<Image src={gongImg} className='san-img' />
 					<View className='visa-c-item-right'>
 						<View className='visa-c-item-title'>申请工函</View>

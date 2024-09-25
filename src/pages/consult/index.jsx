@@ -28,7 +28,13 @@ export default function Consult() {
 					<Icon className='arrow' name='arrow' color='rgba(191, 191, 191, 1)' />
 				</View>
 
-				<View className='c-c-item' onClick={() => Taro.navigateTo({ url: "/pages/consult/message/index" })}>
+				<View className='c-c-item' onClick={() => {
+					if (Taro.getStorageSync('token')) {
+						Taro.navigateTo({ url: "/pages/consult/message/index" })
+					} else {
+						Taro.navigateTo({ url: "/user-login/index" })
+					}
+				}}>
 					<Image src={liuyanImg} style={{ width: "50px", height: "50px" }} />
 					<View className='c-right'>
 						<View className='phone'>留言</View>
