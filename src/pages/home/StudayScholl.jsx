@@ -7,7 +7,7 @@ import Taro, { useDidShow } from "@tarojs/taro";
 export default function StudayScholl() {
 	const [schoolInfoList, setSchoolInfoList] = useState([]);
 	useDidShow(() => {
-		getSchoolInfoList({ list_status: 1 }).then((res) => {
+		getSchoolInfoList({ list_status: 1, page: 1, limit: 3 }).then((res) => {
 			const { code, data } = res;
 			if (code === 1) {
 				setSchoolInfoList(data);

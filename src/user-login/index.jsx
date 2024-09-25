@@ -38,10 +38,9 @@ export default function UserLogin() {
 			}
 		})
 	}
-
 	return (
 		<View className='login'>
-			<NavigationBar leftTitle='悦留重庆' />
+			<NavigationBar isWeight={600} title='悦留重庆' titleColor='#000' isBackIcon={true} backIconColor='#000' />
 			<Image src={teBgImg} className='te-bg' style={{ width: "176px", height: "124px" }} />
 			<Image src={pBgImg} className='te-p' style={{ width: "172px", height: "164px" }} />
 
