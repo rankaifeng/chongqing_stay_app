@@ -53,7 +53,7 @@ export default function Message() {
 		})
 	}
 	return (
-		<View className='message'>
+		<View className='message1'>
 			<NavigationBar title='留言' isBackIcon={true} backIconColor='#000' titleColor='#000' isWeight={600} />
 
 			<View className='message-content'>
