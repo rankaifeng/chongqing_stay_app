@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Taro from '@tarojs/taro'
-import { View, Video, RichText, Image } from '@tarojs/components'
+import { View, Video, RichText, Image, ScrollView } from '@tarojs/components'
 import './index.less'
 import NavigationBar from '../../components/navigation-bar'
 import { tourismListDetail } from '../../api/globApi'
@@ -33,10 +33,9 @@ const InfoListDetail = () => {
         })
     }, [])
     return (
-        <View className='info-detail' style={{ height: str ? '95vh' : '100vh' }}>
+        <ScrollView scrollY className='info-detail' >
             <NavigationBar isBackIcon={true} backIconColor='#fff' />
             <Image mode='aspectFill' src={dataDetail?.cover_image} style={{ height: "220px" }} className='img-t' />
-
             <View className='to'>
                 <View className='to-title'>重庆文旅城</View>
                 <View className='to-bom'>
@@ -53,7 +52,7 @@ const InfoListDetail = () => {
             </View>
             {str && <View className='acti-btn' style={{ background: str.color, display: str.value === '无需报名' ? 'none' : 'block' }}
                 onClick={() => onApplication(str)}>{`${str.value} · ${str.en}`}</View>}
-        </View>
+        </ScrollView>
     )
 }
 export default InfoListDetail;

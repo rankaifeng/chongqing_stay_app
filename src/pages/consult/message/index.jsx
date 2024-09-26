@@ -4,6 +4,7 @@ import { Image, ScrollView, Text, View } from "@tarojs/components";
 import NavigationBar from "../../../components/navigation-bar";
 import { Field } from "@antmjs/vantui";
 import Taro from "@tarojs/taro";
+import iconImg from '../../../imgs/icon.png'
 import { getContactInfoListDetail, contactInfoAdd } from "../../../api/globApi";
 export default function Message() {
 	const [value, setValue] = useState(undefined);
@@ -41,7 +42,7 @@ export default function Message() {
 						return {
 							time: item.create_time,
 							content: item.description,
-							img: item.head_url,
+							img: item.send_user_type === 1 ? item.head_url : iconImg,
 							isMe: item.send_user_type === 1,
 						}
 					})

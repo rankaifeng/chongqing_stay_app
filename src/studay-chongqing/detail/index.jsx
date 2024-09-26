@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Taro from "@tarojs/taro";
-import { View, Image, RichText, Text } from "@tarojs/components";
+import { View, Image, RichText, Text, ScrollView } from "@tarojs/components";
 import "./index.less";
 import NavigationBar from "../../components/navigation-bar";
 import DetailTitle from "../../components/detail-title";
 import BgTitle from "../../components/bg-title";
+import FlexTitle from "../../components/flex-title";
 
 const InfoListDetail = () => {
 	//获取到路由参数
 	const mItemData = Taro.getCurrentInstance().preloadData.itemData;
+	const [opacity, setOpacty] = useState(1)
+	const onScrollBind = (e) => {
+		if (e.detail.scrollTop < 200) {
+			setOpacty(1 - e.detail.scrollTop / 200);
+		}
+	}
 	return (
-		<View className='info-detail'>
+		<ScrollView scrollY onScroll={onScrollBind} className='info-detail' style={{ height: '98%' }}>
 			<NavigationBar isBackIcon={true} backIconColor='#fff' />
-			<Image mode='aspectFill' src={mItemData?.cover_image} style={{ height: "200px" }} className='img-t' />
+			<Image mode='aspectFill' src={mItemData?.cover_image} style={{ height: "210px", opacity: opacity }} className='img-t' />
 			<View className='to'>
 				<DetailTitle
 					title={mItemData?.school_name}
@@ -29,7 +36,7 @@ const InfoListDetail = () => {
 					</View>
 				</View>
 			</View>
-		</View>
+		</ScrollView>
 	);
 };
 export default InfoListDetail;

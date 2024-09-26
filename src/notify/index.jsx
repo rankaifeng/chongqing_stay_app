@@ -16,7 +16,7 @@ export default function Notify() {
 					isLoad={isLoad}
 					setIsLoad={setIsLoad}
 					defaultFilter={{
-						list_status: 1,
+						update_read: 1,
 					}}
 					renderItem={(item, index) => {
 						return (

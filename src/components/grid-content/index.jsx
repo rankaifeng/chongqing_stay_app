@@ -27,7 +27,7 @@ export default function GridContent({ datas, type }) {
 							<Image width='30px' height='30px' src={item.icon} />
 						</View>
 						<Text className='grid-t'>{item.title.length > 4 ? mT[0] : mT}</Text>
-						<Text style={{ visibility: item.title.length > 4 ? "visible" : "hidden" }}>{mT[1]}</Text>
+						<Text style={{ visibility: item.title.length > 4 ? "visible" : "hidden", color: '#333333', fontSize: '26rpx' }}>{mT[1]}</Text>
 						<Text className='grid-t1' style={{ bottom: item.title.length > 4 ? "-25px" : "-8px" }}>
 							{item.eg}
 						</Text>

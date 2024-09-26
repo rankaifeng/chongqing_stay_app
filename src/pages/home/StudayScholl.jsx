@@ -27,7 +27,10 @@ export default function StudayScholl() {
 						<View className='s-left'>
 							{schoolInfoList.map((item) => {
 								return (
-									<View className='left-item'>
+									<View className='left-item' onClick={() => {
+										Taro.preload({ itemData: item });
+										Taro.navigateTo({ url: "/studay-chongqing/detail/index" });
+									}}>
 										<Image
 											className='left-item-img'
 											round
