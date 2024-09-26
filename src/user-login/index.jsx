@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import NavigationBar from "../components/navigation-bar";
 import "./index.less";
 import teBgImg from "../imgs/te-bg.svg";
-import pBgImg from "../imgs/p-bg.png";
+import pBgImg from "../imgs/login-b.png";
 import BgTitle from "../components/bg-title";
 import { Checkbox, Field, Radio } from "@antmjs/vantui";
 import Taro from "@tarojs/taro";
@@ -41,8 +41,12 @@ export default function UserLogin() {
 	return (
 		<View className='login'>
 			<NavigationBar isWeight={600} title='悦留重庆' titleColor='#000' isBackIcon={true} backIconColor='#000' />
-			<Image src={teBgImg} className='te-bg' style={{ width: "176px", height: "124px" }} />
-			<Image src={pBgImg} className='te-p' style={{ width: "172px", height: "164px" }} />
+			<View className="login-bg">
+				<View className="h">Hello!</View>
+				<View className="w">欢迎来到悦留重庆</View>
+				<View className="en">Welcome to Yueliu Chongqing</View>
+			</View>
+			<Image src={pBgImg} className='te-p' style={{ width: "281px", height: "260px", position: 'absolute',right:'-20%',top:'8%' }} />
 
 			<View className='login-c'>
 				<BgTitle title='国籍' size='18px' />
