@@ -11,14 +11,20 @@ const InfoListDetail = () => {
 	//获取到路由参数
 	const mItemData = Taro.getCurrentInstance().preloadData.itemData;
 	const [opacity, setOpacty] = useState(1)
+	const [showFlex, setShowFlex] = useState(false)
 	const onScrollBind = (e) => {
-		if (e.detail.scrollTop < 200) {
+		if (e.detail.scrollTop > 200) {
+			setShowFlex(true)
+		} else {
+			if (e.detail.scrollTop <= 10) {
+				setShowFlex(false)
+			}
 			setOpacty(1 - e.detail.scrollTop / 200);
 		}
 	}
 	return (
 		<ScrollView scrollY onScroll={onScrollBind} className='info-detail' style={{ height: '98%' }}>
-			<NavigationBar isBackIcon={true} backIconColor='#fff' />
+			{showFlex ? <FlexTitle title="详情" /> : <NavigationBar isBackIcon={true} backIconColor='#fff' />}
 			<Image mode='aspectFill' src={mItemData?.cover_image} style={{ height: "210px", opacity: opacity }} className='img-t' />
 			<View className='to'>
 				<DetailTitle

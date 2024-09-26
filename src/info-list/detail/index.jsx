@@ -4,6 +4,7 @@ import { View, Video, RichText, Image, ScrollView } from '@tarojs/components'
 import './index.less'
 import NavigationBar from '../../components/navigation-bar'
 import { tourismListDetail } from '../../api/globApi'
+import FlexTitle from '../../components/flex-title'
 
 const btnArray = [
     { id: 1, value: '活动未开始', en: 'Not Yet Started', color: 'gray' },
@@ -15,7 +16,8 @@ const btnArray = [
 const InfoListDetail = () => {
 
     const dataDetail = Taro.getCurrentInstance().preloadData.data
-
+    const [opacity, setOpacty] = useState(1)
+    const [showFlex, setShowFlex] = useState(false)
     const [str, setStr] = useState(undefined)
 
     const onApplication = str => {
@@ -32,10 +34,20 @@ const InfoListDetail = () => {
             setStr(btnArray.filter(item => item.id === res.data)[0])
         })
     }, [])
+    const onScrollBind = (e) => {
+        if (e.detail.scrollTop > 200) {
+            setShowFlex(true)
+        } else {
+            if (e.detail.scrollTop <= 10) {
+                setShowFlex(false)
+            }
+            setOpacty(1 - e.detail.scrollTop / 200);
+        }
+    }
     return (
-        <ScrollView scrollY className='info-detail' >
-            <NavigationBar isBackIcon={true} backIconColor='#fff' />
-            <Image mode='aspectFill' src={dataDetail?.cover_image} style={{ height: "220px" }} className='img-t' />
+        <ScrollView scrollY className='info-detail' onScroll={onScrollBind}>
+            {showFlex ? <FlexTitle title="详情" /> : <NavigationBar isBackIcon={true} backIconColor='#fff' />}
+            <Image mode='aspectFill' src={dataDetail?.cover_image} style={{ height: "220px", opacity: opacity }} className='img-t' />
             <View className='to'>
                 <View className='to-title'>重庆文旅城</View>
                 <View className='to-bom'>
