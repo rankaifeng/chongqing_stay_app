@@ -13,18 +13,19 @@ import { applicationRecordInfoAdd } from "../api/globApi";
 import Taro from "@tarojs/taro";
 
 export default function ApplicationLetter() {
+	const currentDate = new Date();
+	const year = currentDate.getFullYear();
+	const month = currentDate.getMonth(); // 月份从0开始，所以加1
+	const day = currentDate.getDate();
 	const [type, setType] = useState(undefined);
 	const [title, setTitle] = useState(undefined);
 	const [tag, setTag] = useState(undefined)
 	const [state, setState] = useState(() => {
-		const currentDate = new Date();
-		const year = currentDate.getFullYear();
-		const month = currentDate.getMonth(); // 月份从0开始，所以加1
-		const day = currentDate.getDate();
 		return {
 			currentDate: new Date(year, month, day),
 		};
 	});
+
 	const onDeineClick = () => {
 		const mCurrentDate = timestampToDateFormat(state.currentDate)
 		const mData = {
@@ -191,6 +192,7 @@ export default function ApplicationLetter() {
 						} else {
 							setTitle(undefined)
 						}
+						setState({ currentDate: new Date(year, month, day) })
 					}} className='confirm-btn' style={{ marginLeft: "15px" }}>
 						确定·Define
 					</View>
