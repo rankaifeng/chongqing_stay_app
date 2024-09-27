@@ -19,7 +19,7 @@ export default function ImgContent({ onClick, imgUrl, title, time, type, videoUr
 
 			<View className='left'>
 				<View className='el ellipsis2'>{title}</View>
-				<View className='time'>{time}</View>
+				<View className='time'>{time}</View> 
 			</View>
 		</View>
 	);

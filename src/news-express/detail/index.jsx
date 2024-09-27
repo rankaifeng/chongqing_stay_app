@@ -24,8 +24,8 @@ const InfoListDetail = () => {
 	return (
 		<ScrollView scrollY className='info-detail' onScroll={onScrollBind}>
 			{showFlex ? <FlexTitle title="详情" /> : <NavigationBar isBackIcon={true} backIconColor='#fff' />}
-			<Image mode='aspectFill' src={mItemData?.cover_image} style={{ height: "210px", opacity: opacity }} className='img-t' />
-			<View className='to'>
+			<Image mode='widthFix' src={mItemData?.cover_image} style={{ height: "210px", opacity: opacity }} className='img-t' />
+			<View className='to' style={{ top: '235px' }}>
 				<DetailTitle title={mItemData?.title} imgUrl={mItemData?.cover_image} />
 				<View className='de-c'>
 					<RichText nodes={mItemData?.description} />
