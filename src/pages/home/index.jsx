@@ -18,6 +18,7 @@ import SwiperImg from "./SwiperImg";
 import NewExpress from "./NewExpress";
 import StudayScholl from "./StudayScholl";
 import Window from "./Window";
+import GridTitleContent from "./grid-content";
 
 export default function Home() {
 	return (
@@ -31,7 +32,7 @@ export default function Home() {
 						<Text>·Visa Information</Text>
 					</View>
 
-					<GridContent
+					<GridTitleContent
 						datas={[
 							{
 								title: "居留须知",
@@ -76,10 +77,11 @@ export default function Home() {
 						datas={[
 							{
 								title: "创新创业项目申报",
-								eg: "Innovation and...",
+								eg: "Application for innovation and entrepreneurship",
 								bg: "#ffdbc2",
 								path: "/project-application/index",
 								icon: chuagnxinImg,
+								bottom: '20rpx'
 							},
 							{
 								title: "实习指导",
@@ -87,6 +89,7 @@ export default function Home() {
 								path: "/internship-guidance/index",
 								bg: "#d0cfff",
 								icon: zhidaoImg,
+								bottom: '0'
 							},
 							{
 								title: "电商海外贸易产品",
@@ -94,6 +97,7 @@ export default function Home() {
 								path: "/commerce-overseas/index",
 								bg: "#a3c9ff",
 								icon: dianshangImg,
+								bottom: '20rpx'
 							},
 							{
 								title: `创业公司项目展示`,
@@ -101,6 +105,7 @@ export default function Home() {
 								path: "/collaborative-startups/index",
 								bg: "#9ee4ff",
 								icon: gognsiImg,
+								bottom: '20rpx'
 							},
 						]}
 					/>
