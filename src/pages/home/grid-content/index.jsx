@@ -21,9 +21,11 @@ export default function GridTitleContent({ datas, type }) {
 							<Image width='30px' height='30px' src={item.icon} />
 						</View>
 						<Text className='grid-t'>{item.title}</Text>
-						<Text className='grid-t12' style={{ bottom: "-8px" }}>
+						{item.bottom == 0 ? <Text className='grid-t12' style={{ bottom: "-8px" }}>
 							{item.eg}
-						</Text>
+						</Text> : <Text className='grid-t12' style={{ bottom: 0 }}>
+							{item.eg}
+						</Text>}
 					</View>
 				);
 			})}

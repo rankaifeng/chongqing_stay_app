@@ -40,6 +40,7 @@ export default function Home() {
 								path: "/residence-information/index",
 								bg: "#e0edff",
 								icon: xuImg,
+								bottom: 0
 							},
 							{
 								title: "办事指南",

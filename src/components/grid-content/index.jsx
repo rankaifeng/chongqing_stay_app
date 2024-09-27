@@ -28,9 +28,12 @@ export default function GridContent({ datas, type }) {
 						</View>
 						<Text className='grid-t'>{item.title.length > 4 ? mT[0] : mT}</Text>
 						<Text style={{ visibility: item.title.length > 4 ? "visible" : "hidden", color: '#333333', fontSize: '26rpx' }}>{mT[1]}</Text>
-						<Text className='grid-t1 ellipsis2' style={{ bottom: item.title.length > 4 ? "-25px" : "-8px" }}>
+						{item.bottom == 0 ? <Text className='grid-t1' style={{ bottom: 0 }}>
 							{item.eg}
-						</Text>
+						</Text> : <Text className='grid-t1 ellipsis2' style={{ bottom: item.title.length > 4 ? "-10px" : "-8px" }}>
+							{item.eg}
+						</Text>}
+
 					</View>
 				);
 			})}
