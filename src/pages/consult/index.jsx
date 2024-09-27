@@ -28,7 +28,7 @@ export default function Consult() {
 					<Icon className='arrow' name='arrow' color='rgba(191, 191, 191, 1)' />
 				</View>
 
-				<View className='c-c-item' onClick={() => {
+				<View className='c-c-item' style={{ marginTop: '20rpx' }} onClick={() => {
 					if (Taro.getStorageSync('token')) {
 						Taro.navigateTo({ url: "/pages/consult/message/index" })
 					} else {
