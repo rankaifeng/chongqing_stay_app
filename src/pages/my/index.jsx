@@ -7,11 +7,11 @@ import Icon from "@antmjs/vantui/es/icon";
 import BgTitle from "../../components/bg-title";
 import zy from "../../imgs/zy.svg";
 import xy from "../../imgs/xy.svg";
-import Taro from "@tarojs/taro";
+import Taro, { useDidShow } from "@tarojs/taro";
 export default function My() {
 
 	const [userInfo, setUserInfo] = useState(undefined)
-	useEffect(() => {
+	useDidShow(() => {
 		const mUser = Taro.getStorageSync('userInfo')
 		if (mUser) {
 			setUserInfo(JSON.parse(mUser))
@@ -27,12 +27,13 @@ export default function My() {
 		const daysDifference = Math.floor((timestamp - startTimestamp) / oneDay);
 		return daysDifference + 2;
 	}
+
 	return (
 		<View className='my'>
 			<View className='my-content'>
 				<NavigationBar leftTitle='个人中心' />
 				<View className='my-top'>
-					<Text className='name' onClick={() => Taro.navigateTo({ url: '/user-login/index' })}>{userInfo?.student_name} {Taro.getStorageSync('token') ? null : '[点击登录]'}</Text>
+					<Text className='name' onClick={() => Taro.navigateTo({ url: '/user-login/index' })}>{userInfo?.student_name || '[点击登录]'}</Text>
 					<Text className='day'>加入悦留学重庆第 {userInfo?.create_time ? calculateDays(userInfo?.create_time) : 0} 天</Text>
 					<Image className='avatar' src={userInfo?.head_url || 'https://img.yzcdn.cn/vant/cat.jpeg'} round />
 				</View>
