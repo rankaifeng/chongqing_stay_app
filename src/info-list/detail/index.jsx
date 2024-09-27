@@ -62,7 +62,7 @@ const InfoListDetail = () => {
                     <RichText nodes={dataDetail.mark} />
                 </View>}
             </View>
-            {str && <View className='acti-btn' style={{ background: str.color, display: str.value === '无需报名' ? 'none' : 'block' }}
+            {str && <View  className='acti-btn'  style={{ background: str.color, display: str.value === '无需报名' ? 'none' : 'block' }}
                 onClick={() => onApplication(str)}>{`${str.value} · ${str.en}`}</View>}
         </ScrollView>
     )

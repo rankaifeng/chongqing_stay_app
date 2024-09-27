@@ -33,6 +33,10 @@ const InfoAapplication = () => {
             Taro.showToast({ title: '参加日期不能为空', icon: 'none' })
             return;
         }
+        if (!mark) {
+            Taro.showToast({ title: '备注不能为空', icon: 'none' })
+            return;
+        }
         tourismSubscribeAdd({ id: dataDetail.id, participation_time: new Date(dateStr).getTime() / 1000, mark }).then(res => {
             Taro.showToast({ title: res.msg, icon: 'none' })
             if (res.code === 1) {
@@ -63,7 +67,7 @@ const InfoAapplication = () => {
 
                 <View className='ship-mark'>
                     <View className='date-title'>备注 · Note</View>
-                    <Textarea placeholder='请输入备注......' onInput={v => setMark(v.detail.value)} />
+                    <Textarea style={{ height: '100px' }} placeholder='请输入备注......' onInput={v => setMark(v.detail.value)} />
                 </View>
 
             </View>
