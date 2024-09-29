@@ -80,7 +80,7 @@ export default defineAppConfig({
   tabBar: {
     color: '#666',
     selectedColor: '#437CFF',
-    borderStyle: 'black',
+    borderStyle: 'white',
     list: [
       {
         pagePath: 'pages/home/index',

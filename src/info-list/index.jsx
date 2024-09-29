@@ -24,13 +24,8 @@ const InfoList = () => {
         })
     }
     const onDateDetail = item => {
-        if (!Taro.getStorageSync('token')) {
-            Taro.navigateTo({ url: '/user-login/index' })
-        } else {
-            Taro.preload({ data: item })
-            Taro.navigateTo({ url: '/info-list/detail/index' })
-        }
-
+        Taro.preload({ data: item })
+        Taro.navigateTo({ url: '/info-list/detail/index' })
     }
 
     return (

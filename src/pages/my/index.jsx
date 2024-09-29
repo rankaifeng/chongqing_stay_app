@@ -11,14 +11,7 @@ import Taro, { useDidShow } from "@tarojs/taro";
 export default function My() {
 
 	const [userInfo, setUserInfo] = useState(undefined)
-	useDidShow(() => {
-		const mUser = Taro.getStorageSync('userInfo')
-		if (mUser) {
-			setUserInfo(JSON.parse(mUser))
-		} else {
-			Taro.navigateTo({ url: '/user-login/index' })
-		}
-	}, [])
+
 
 	function calculateDays(startTimestamp) {
 		const timestamp = Math.floor(Date.now() / 1000);

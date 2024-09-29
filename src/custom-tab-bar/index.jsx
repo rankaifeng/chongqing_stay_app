@@ -3,6 +3,6 @@ import React from 'react'
 
 export default function CustomTabBar() {
     return (
-        <View>CustomTabBar</View>
+        <View style={{ height: '150rpx', background: 'red', position: 'fixed', bottom: 0 ,width:'100%'}}>CustomTabBar</View>
     )
 }

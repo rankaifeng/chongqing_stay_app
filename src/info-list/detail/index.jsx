@@ -22,8 +22,12 @@ const InfoListDetail = () => {
 
     const onApplication = str => {
         if (str.value === '报名参与') {
-            Taro.navigateTo({ url: '/info-list/application/index' })
-            Taro.preload({ data: dataDetail })
+            if (Taro.getStorageSync("token")) {
+                Taro.navigateTo({ url: '/info-list/application/index' })
+                Taro.preload({ data: dataDetail })
+            } else {
+                Taro.navigateTo({ url: '/user-login/index' })
+            }
         }
     }
     useEffect(() => {
@@ -62,7 +66,7 @@ const InfoListDetail = () => {
                     <RichText nodes={dataDetail.mark} />
                 </View>}
             </View>
-            {str && <View  className='acti-btn'  style={{ background: str.color, display: str.value === '无需报名' ? 'none' : 'block' }}
+            {str && <View className='acti-btn' style={{ background: str.color, display: str.value === '无需报名' ? 'none' : 'block' }}
                 onClick={() => onApplication(str)}>{`${str.value} · ${str.en}`}</View>}
         </ScrollView>
     )

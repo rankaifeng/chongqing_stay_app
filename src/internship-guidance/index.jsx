@@ -49,7 +49,7 @@ export default function InternshipGuidance() {
 						);
 					})
 				) : (
-					<Empty />
+					<Empty description="暂无数据" />
 				)}
 			</HomePubList>
 			{description && <MyDialog setDescription={setDescription} description={description} />}

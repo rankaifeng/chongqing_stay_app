@@ -19,13 +19,14 @@ import NewExpress from "./NewExpress";
 import StudayScholl from "./StudayScholl";
 import Window from "./Window";
 import GridTitleContent from "./grid-content";
-
+import useBarHeight from '../../hooks/useBarHeight'
 export default function Home() {
+	const { navBarHeight } = useBarHeight()
 	return (
 		<View className='home'>
 			<View className='home-content'>
 				<NavigationBar leftTitle='悦留重庆' />
-				<View className='v'>
+				<View className='v' style={{ height: `calc(100vh - ${navBarHeight + 15}px)` }}>
 					<SwiperImg />
 					<View className='t'>
 						<BgTitle title='签证须知' size='18px' />
