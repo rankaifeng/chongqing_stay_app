@@ -11,7 +11,14 @@ import Taro, { useDidShow } from "@tarojs/taro";
 export default function My() {
 
 	const [userInfo, setUserInfo] = useState(undefined)
-
+	useDidShow(() => {
+		const mUser = Taro.getStorageSync('userInfo')
+		if (mUser) {
+			setUserInfo(JSON.parse(mUser))
+		} else {
+			setUserInfo(undefined)
+		}
+	}, [])
 
 	function calculateDays(startTimestamp) {
 		const timestamp = Math.floor(Date.now() / 1000);
@@ -79,7 +86,8 @@ export default function My() {
 				</View>
 
 				<View className='exit' onClick={() => {
-					Taro.reLaunch({ url: "/user-login/index" })
+					Taro.clearStorageSync();
+					Taro.navigateTo({ url: "/user-login/index" })
 				}}>退出账号·Abort</View>
 			</View>
 		</View>

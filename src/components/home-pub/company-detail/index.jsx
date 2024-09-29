@@ -29,7 +29,7 @@ export default function CompanyDetail() {
 				</View>
 				<View className='location'>
 					<Icon name='location-o' color='rgba(0, 0, 0, 1)' />
-					<Text>{companyDetail?.location}</Text>
+					<Text style={{ color: 'gray', fontSize: '12px', fontWeight: 100 }}>{companyDetail?.location}</Text>
 				</View>
 				<View className='company-border' />
 				<View style={{ fontSize: '30rpx', fontWeight: '600', margin: '20rpx 0' }}>公司介绍·Company Profile</View>

@@ -37,7 +37,7 @@ export default function Home() {
 						datas={[
 							{
 								title: "居留须知",
-								eg: "Notes on Residence",
+								eg: "Residence Information",
 								path: "/residence-information/index",
 								bg: "#e0edff",
 								icon: xuImg,
@@ -46,7 +46,7 @@ export default function Home() {
 							{
 								title: "办事指南",
 								path: "/service-guide/index",
-								eg: "Clerk's Guide",
+								eg: "Service Guide",
 								bg: "#baf3e5",
 								icon: banshiImg,
 							},
@@ -86,8 +86,8 @@ export default function Home() {
 								bottom: '20rpx'
 							},
 							{
-								title: "实习指导",
-								eg: "Practical guidance",
+								title: "实习试训",
+								eg: "Internship Training",
 								path: "/internship-guidance/index",
 								bg: "#d0cfff",
 								icon: zhidaoImg,
@@ -95,7 +95,7 @@ export default function Home() {
 							},
 							{
 								title: "电商海外贸易产品",
-								eg: "E-commerce overseas...",
+								eg: "E-commerce overseas trade products",
 								path: "/commerce-overseas/index",
 								bg: "#a3c9ff",
 								icon: dianshangImg,
@@ -103,7 +103,7 @@ export default function Home() {
 							},
 							{
 								title: `创业公司项目展示`,
-								eg: "Startup Company",
+								eg: "Startup Company Project Showcase",
 								path: "/collaborative-startups/index",
 								bg: "#9ee4ff",
 								icon: gognsiImg,

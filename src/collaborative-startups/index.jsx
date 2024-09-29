@@ -9,6 +9,7 @@ import MyDialog from "../components/home-pub/dialog";
 export default function CollaborativeStartups() {
 	const [enterPiseInfoList, setEnterPiseInfoList] = useState([]);
 	const [description, setDescription] = useState(undefined);
+	const [id, setId] = useState(undefined)
 	useEffect(() => {
 		getEnterpriseInfoList().then((res) => {
 			setEnterPiseInfoList(res.data);
@@ -16,6 +17,7 @@ export default function CollaborativeStartups() {
 
 		getEmploymentGuideListDetail({ employment_guide_type: 3 }).then((res) => {
 			setDescription(res.data.description);
+			setId(res.data.id)
 		});
 	}, []);
 
@@ -46,7 +48,7 @@ export default function CollaborativeStartups() {
 				) : (
 					<Empty />
 				)}
-				{description && <MyDialog setDescription={setDescription} description={description} />}
+				{description && <MyDialog id={id} type="collaborative" setDescription={setDescription} description={description} />}
 			</HomePubList>
 		</>
 	);

@@ -157,3 +157,10 @@ export const uploadFile = (p) => post('/student_manage/student_info/student_info
  * @returns 
  */
 export const applicationRecordInfoAdd = p => post("/student_manage/student_info/application_record_info_add", p)
+
+/**
+ * 弹窗
+ * @param {*} p 
+ * @returns 
+ */
+export const employmentGuideRead = p => post('/employment_manage/employment_guide/employment_guide_read', p)

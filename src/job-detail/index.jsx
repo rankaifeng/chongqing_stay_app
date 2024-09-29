@@ -4,6 +4,7 @@ import Taro from "@tarojs/taro";
 
 export default function JobDetail() {
 	const mParams = Taro.getCurrentInstance().router.params;
+	
 	return (
 		<JobPageDetail
 			title={mParams?.title}

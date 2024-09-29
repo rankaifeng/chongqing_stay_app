@@ -18,18 +18,20 @@ export default function JobPageDetail({
 	enterpriseId,
 	desTitle
 }) {
+	console.log(location);
+
 	return (
 		<View className='job-detail'>
-			<NavigationBar title={title} isBackIcon={true} backIconColor='#000' titleColor='#000' isWeight={600} />
+			<NavigationBar title={desTitle.includes("岗位职责") ? '岗位详情' : title} isBackIcon={true} backIconColor='#000' titleColor='#000' isWeight={600} />
 
 			<View className='job-detail-content'>
-				<View className='j-t'>
-					<Text className='jt-1'>{des}</Text>·{desEn}
-				</View>
+				{title === "产品详情" || <View className='j-t'>
+					<Text className='jt-1' style={{ fontSize: '18px' }}>{title}</Text>
+				</View>}
 				{title === "产品详情" || (
 					<View className='location'>
 						<Icon name='location-o' color='rgba(0, 0, 0, 1)' />
-						<Text>{location}</Text>
+						<Text style={{ color: 'gray', fontSize: '12px', fontWeight: 100 }}>{location}</Text>
 					</View>
 				)}
 

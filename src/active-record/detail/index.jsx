@@ -13,7 +13,7 @@ export default function ActiveRecordDetail() {
 			<NavigationBar title='详情' isBackIcon={true} isWeight={true} titleColor='#000' backIconColor='#000' />
 			<View className='active-record-item'>
 				<BgTitle title='申请信息' size='16px' />
-				<Text className='other-title'>·Application Lnformation</Text>
+				<Text className='other-title'>·Application Information</Text>
 				<View className='content'>
 					<View className='status-content'>
 						<StatusBtn status={dataDetail.subscribe_status} />

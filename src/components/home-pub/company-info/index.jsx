@@ -16,8 +16,9 @@ export default function CompanyInfo({ type, name, location, logo, enterpriseIntr
 			<View className='company-info'>
 				<View className='company-name'>{name}</View>
 				<View className='company-address'>
-					<View className='company-address-desc'>Chongqing Huanxu Technology Co.</View>
-					<View className='company-address-text'>{type ? <Icon name='arrow' size={30} /> : location}</View>
+					<Icon name='location-o' color='rgba(0, 0, 0, 1)' />
+					{/* <View className='company-address-desc'>Chongqing Huanxu Technology Co.</View> */}
+					<View className='company-address-text'>{location}</View>
 				</View>
 			</View>
 		</View>

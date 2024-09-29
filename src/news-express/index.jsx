@@ -27,7 +27,7 @@ export default function NewsExpress() {
 								time={item.update_time}
 								imgUrl={item.cover_image}
 								onClick={() => {
-									Taro.preload({ itemData: item });
+									Taro.preload({ itemData: item, time: item.update_time });
 									Taro.navigateTo({ url: "/news-express/detail/index" });
 								}}
 							/>

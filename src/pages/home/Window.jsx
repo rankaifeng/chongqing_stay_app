@@ -8,7 +8,7 @@ export default function Window() {
 
     const [windows, setWindows] = useState([])
     useDidShow(() => {
-        culturalTourismList({ list_status: 1, page: 1, limit: 1 }).then(res => {
+        culturalTourismList({ list_status: 1, cultural_type: 1, page: 1, limit: 1 }).then(res => {
             setWindows(res.data)
         })
     }, [])

@@ -38,7 +38,7 @@ export default function Consult() {
 					<Image src={liuyanImg} style={{ width: "50px", height: "50px" }} />
 					<View className='c-right'>
 						<View className='phone'>留言</View>
-						<View className='phone-des'>Make a telephone call</View>
+						<View className='phone-des'>Leaving a message</View>
 					</View>
 					<Icon className='arrow' name='arrow' color='rgba(191, 191, 191, 1)' />
 				</View>

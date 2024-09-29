@@ -9,6 +9,7 @@ import MyDialog from "../components/home-pub/dialog";
 export default function CommerceOverseas() {
 	const [prdoctInfoList, setPrdoctInfoList] = useState([]);
 	const [description, setDescription] = useState(undefined);
+	const [id, setId] = useState(undefined)
 	useEffect(() => {
 		getProductInfoList({ list_status: 1 }).then((res) => {
 			setPrdoctInfoList(res.data);
@@ -16,6 +17,7 @@ export default function CommerceOverseas() {
 
 		getEmploymentGuideListDetail({ employment_guide_type: 3 }).then((res) => {
 			setDescription(res.data.description);
+			setId(res.data.id)
 		});
 	}, []);
 
@@ -30,7 +32,7 @@ export default function CommerceOverseas() {
 								onClick={() => {
 									Taro.preload({ enterpriseIntroduce: item?.product_introduce });
 									Taro.navigateTo({
-										url: `/job-detail/index?title=产品详情&des=${item?.product_name}&name=${item?.enterprise_name}&logo=${item?.enterprise_cover_image}&enterpriseId=${item.enterprise_id}&desTitle=产品简介·Products`,
+										url: `/job-detail/index?title=产品详情&des=${item?.product_name}&name=${item?.enterprise_name}&logo=${item?.enterprise_cover_image}&enterpriseId=${item.enterprise_id}&desTitle=产品简介·Products&location=${item?.enterprise_location}`,
 									});
 								}}>
 								<Image mode='aspectFill' className='imgs' src={item?.cover_image_list[0]} />
@@ -47,7 +49,7 @@ export default function CommerceOverseas() {
 					<Empty />
 				)}
 
-				{description && <MyDialog setDescription={setDescription} description={description} />}
+				{description && <MyDialog id={id} type="commerce" setDescription={setDescription} description={description} />}
 			</HomePubList>
 		</>
 	);
