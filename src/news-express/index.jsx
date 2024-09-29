@@ -6,6 +6,7 @@ import ImgContent from "../components/img-content";
 import Taro from "@tarojs/taro";
 import RefreshList from "../components/refresh-list";
 import { getNewsExpressList } from "../api/globApi";
+import huiImg from '../imgs/hui.jpg'
 export default function NewsExpress() {
 	const [isLoad, setIsLoad] = useState(false);
 
@@ -27,7 +28,7 @@ export default function NewsExpress() {
 								time={item.update_time}
 								imgUrl={item.cover_image}
 								onClick={() => {
-									Taro.preload({ itemData: item, time: item.update_time });
+									Taro.preload({ itemData: { ...item, type: 1 }, time: item.update_time });
 									Taro.navigateTo({ url: "/news-express/detail/index" });
 								}}
 							/>

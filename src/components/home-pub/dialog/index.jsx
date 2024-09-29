@@ -20,6 +20,8 @@ export default function MyDialog({ setDescription, description, type, id }) {
 			return;
 		}
 	}, [description])
+	console.log(show);
+	
 	return (
 		<Dialog
 			className='vanDialog3'
