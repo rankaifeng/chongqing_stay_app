@@ -27,12 +27,21 @@
         .right-des {
             color: rgba(166, 166, 166, 1);
             font-size: 24px;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
+            position: relative;
+            line-height: 1.5em;
+            height: 3em;
             overflow: hidden;
-            text-overflow: ellipsis;
             margin-top: 10px;
+            margin-right: 11px;
+
+            &::after {
+                content: "...";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 0 5px;
+                background-color: #fff;
+            }
         }
     }
 }

@@ -14,6 +14,7 @@ export default function StudaySchoolItem({ item }) {
 			<View className='item-right'>
 				<View className='right-name'>{item?.school_name}</View>
 				<RichText className='right-des' nodes={item?.description} />
+				{/* <View className='right-des' dangerouslySetInnerHTML={{ __html: item?.description }} /> */}
 			</View>
 		</View>
 	);
