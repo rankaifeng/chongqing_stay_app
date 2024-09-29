@@ -24,14 +24,13 @@ export default function CommerceOverseas() {
 			<HomePubList title='海外电商产品' bgTitle='海外电商产品' type={4}>
 				{prdoctInfoList && prdoctInfoList.length ? (
 					prdoctInfoList.map((item) => {
-						console.log(item);
 						return (
 							<View
 								className='list-item'
 								onClick={() => {
 									Taro.preload({ enterpriseIntroduce: item?.product_introduce });
 									Taro.navigateTo({
-										url: `/job-detail/index?title=产品详情&des=${item?.product_name}&name=${item?.enterprise_name}&logo=${item?.enterprise_cover_image}&enterpriseId=${item.enterprise_id}`,
+										url: `/job-detail/index?title=产品详情&des=${item?.product_name}&name=${item?.enterprise_name}&logo=${item?.enterprise_cover_image}&enterpriseId=${item.enterprise_id}&desTitle=产品简介·Products`,
 									});
 								}}>
 								<Image mode='aspectFill' className='imgs' src={item?.cover_image_list[0]} />

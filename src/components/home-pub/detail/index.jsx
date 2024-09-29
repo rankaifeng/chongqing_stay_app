@@ -4,6 +4,7 @@ import NavigationBar from "../../navigation-bar";
 import "./index.less";
 import { Icon } from "@antmjs/vantui";
 import CompanyInfo from "../company-info";
+import BgTitle from "../../bg-title";
 export default function JobPageDetail({
 	title,
 	des,
@@ -14,7 +15,8 @@ export default function JobPageDetail({
 	enterpriseIntroduce,
 	positionIntroduce,
 	enterpriseDes,
-	enterpriseId
+	enterpriseId,
+	desTitle
 }) {
 	return (
 		<View className='job-detail'>
@@ -43,6 +45,7 @@ export default function JobPageDetail({
 						enterpriseIntroduce={enterpriseIntroduce}
 					/>
 				</View>
+				<View style={{ fontSize: '30rpx', fontWeight: '600', margin: '20rpx 0' }}>{desTitle}</View>
 				<View className='c-c-html'>
 					<RichText nodes={title === "产品详情" ? enterpriseIntroduce : positionIntroduce} />
 				</View>

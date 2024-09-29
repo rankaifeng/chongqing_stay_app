@@ -32,7 +32,7 @@ export default function CompanyDetail() {
 					<Text>{companyDetail?.location}</Text>
 				</View>
 				<View className='company-border' />
-
+				<View style={{ fontSize: '30rpx', fontWeight: '600', margin: '20rpx 0' }}>公司介绍·Company Profile</View>
 				<View className='show-html'>
 					<RichText nodes={companyDetail?.enterprise_introduce} />
 				</View>

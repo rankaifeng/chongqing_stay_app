@@ -29,7 +29,7 @@ export default function InternshipGuidance() {
 								className='list-item'
 								onClick={() => {
 									Taro.navigateTo({
-										url: `/job-detail/index?title=岗位详情&des=业务产品线下推广专员&desEn=Business Product...&location=${item?.enterprise_location}&logo=${item?.enterprise_cover_image}&name=${item?.enterprise_name}&enterpriseIntroduce=公司简介&positionIntroduce=${item.position_introduce}&enterpriseId=${item.enterprise_id}`,
+										url: `/job-detail/index?title=岗位详情&des=业务产品线下推广专员&desEn=Business Product...&location=${item?.enterprise_location}&logo=${item?.enterprise_cover_image}&name=${item?.enterprise_name}&enterpriseIntroduce=公司简介&positionIntroduce=${item.position_introduce}&enterpriseId=${item.enterprise_id}&desTitle=岗位职责·Job responsibilities`,
 									});
 								}}>
 								<Text className='item-y'>业务产品线下推广专员·Business Product...</Text>

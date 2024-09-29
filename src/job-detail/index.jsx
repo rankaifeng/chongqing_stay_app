@@ -15,6 +15,7 @@ export default function JobDetail() {
 			enterpriseId={mParams?.enterpriseId}
 			positionIntroduce={mParams?.positionIntroduce}
 			enterpriseDes={mParams?.enterpriseDes}
+			desTitle={mParams?.desTitle}
 			enterpriseIntroduce={
 				mParams.title === "产品详情"
 					? Taro.getCurrentInstance().preloadData.enterpriseIntroduce
