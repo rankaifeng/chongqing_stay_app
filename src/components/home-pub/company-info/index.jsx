@@ -17,10 +17,10 @@ export default function CompanyInfo({ type, name, location, logo, enterpriseIntr
 				<View className='company-name'>{name}</View>
 				<View className='company-address'>
 					<Icon name='location-o' color='rgba(0, 0, 0, 1)' />
-					{/* <View className='company-address-desc'>Chongqing Huanxu Technology Co.</View> */}
 					<View className='company-address-text'>{location}</View>
 				</View>
 			</View>
+			<Icon className='arrow' name='arrow' size={30} color='#a6a6a6' />
 		</View>
 	);
 }
