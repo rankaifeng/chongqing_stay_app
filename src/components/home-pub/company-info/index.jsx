@@ -24,3 +24,4 @@ export default function CompanyInfo({ type, name, location, logo, enterpriseIntr
 		</View>
 	);
 }
+

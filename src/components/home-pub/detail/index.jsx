@@ -20,9 +20,6 @@ export default function JobPageDetail({
 	desTitle,
 	img
 }) {
-
-	console.log(title);
-
 	return (
 		<View className='job-detail'>
 			<NavigationBar title={desTitle.includes("岗位职责") ? '岗位详情' : title} isBackIcon={true} backIconColor='#000' titleColor='#000' isWeight={600} />
