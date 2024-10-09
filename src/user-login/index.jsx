@@ -56,7 +56,7 @@ export default function UserLogin() {
 				<View className='login-c-item'>
 					<BgTitle title='护照号' size='18px' />
 					<Text className='login-c-text'>·Passport Number</Text>
-					<Field onChange={e => setIDNumber(e.detail)} border={false} placeholder='请输入国籍·Please select nationality' />
+					<Field onChange={e => setIDNumber(e.detail)} border={false} placeholder='请输入护照号·Please enter your passport number' />
 				</View>
 
 				<Button className='login-btn' onClick={onUserLogin} >一键登录·Login</Button>
